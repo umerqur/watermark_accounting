@@ -1,1044 +1,360 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Watermark Accounting Services | Tax Filing in Mississauga</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --wm-primary: #0063a6;
-      --wm-primary-soft: #e5f2fb;
-      --wm-accent: #ffb54a;
-      --wm-bg: #f5f7fb;
-      --wm-text: #1f2733;
-      --wm-muted: #6c7a8a;
-      --wm-card: #ffffff;
-      --wm-border: #dde3ee;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--wm-text);
-      background-color: var(--wm-bg);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button {
-      font-family: inherit;
-    }
-
-    .page-shell {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 16px 72px;
-    }
-
-    /* header */
-
-    .top-bar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background-color: #ffffff;
-      border-bottom: 1px solid var(--wm-border);
-    }
-
-    .top-bar-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--wm-primary);
-    }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #ffffff 0, #ffffff 40%, var(--wm-primary-soft) 40%, var(--wm-primary) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      color: var(--wm-primary);
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
-    }
-
-    .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--wm-muted);
-    }
-
-    .top-phone {
-      font-weight: 600;
-      color: var(--wm-primary);
-      white-space: nowrap;
-    }
-
-    .btn {
-      border: none;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
-    }
-
-    .btn-primary {
-      background-color: var(--wm-primary);
-      color: #ffffff;
-      box-shadow: 0 6px 14px rgba(0, 77, 135, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 26px rgba(0, 77, 135, 0.3);
-      background-color: #005188;
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      color: var(--wm-primary);
-      border: 1px solid var(--wm-primary-soft);
-    }
-
-    /* hero */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-      gap: 32px;
-      align-items: center;
-      padding: 40px 0 32px;
-    }
-
-    .hero-main-tag {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--wm-primary);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 8px;
-    }
-
-    .hero-title {
-      font-size: 32px;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-
-    .hero-title span {
-      color: var(--wm-primary);
-    }
-
-    .hero-sub {
-      font-size: 15px;
-      color: var(--wm-muted);
-      margin-bottom: 20px;
-      max-width: 520px;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 14px;
-    }
-
-    .hero-note {
-      font-size: 13px;
-      color: var(--wm-muted);
-    }
-
-    .hero-trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      font-size: 12px;
-      color: var(--wm-muted);
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--wm-border);
-      background-color: #ffffff;
-    }
-
-    .hero-pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background-color: #17c964;
-    }
-
-    .hero-card {
-      background-color: var(--wm-card);
-      border-radius: 16px;
-      padding: 20px 18px 18px;
-      box-shadow: 0 14px 40px rgba(15, 35, 52, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-    }
-
-    .hero-card-title {
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .hero-card-sub {
-      font-size: 13px;
-      color: var(--wm-muted);
-      margin-bottom: 12px;
-    }
-
-    .hero-card-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 10px;
-      font-size: 13px;
-    }
-
-    .hero-card-stat {
-      flex: 1;
-      padding: 10px 10px 8px;
-      border-radius: 12px;
-      background-color: var(--wm-primary-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .hero-card-stat-label {
-      font-size: 11px;
-      color: var(--wm-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .hero-card-stat-value {
-      font-weight: 700;
-      color: var(--wm-primary);
-    }
-
-    .hero-card-list {
-      font-size: 13px;
-      color: var(--wm-muted);
-      display: grid;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-
-    .hero-card-list span {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .bullet-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background-color: var(--wm-primary);
-    }
-
-    /* sections */
-
-    .section {
-      padding: 32px 0;
-    }
-
-    .section-header {
-      margin-bottom: 18px;
-      text-align: left;
-    }
-
-    .section-kicker {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--wm-primary);
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .section-sub {
-      font-size: 14px;
-      color: var(--wm-muted);
-      max-width: 540px;
-    }
-
-    /* what you get */
-
-    .benefit-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .benefit-card {
-      background-color: var(--wm-card);
-      border-radius: 14px;
-      padding: 16px 16px 14px;
-      border: 1px solid var(--wm-border);
-      box-shadow: 0 8px 20px rgba(15, 35, 52, 0.06);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .benefit-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--wm-primary-soft);
-      color: var(--wm-primary);
-      font-size: 18px;
-    }
-
-    .benefit-title {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .benefit-text {
-      font-size: 13px;
-      color: var(--wm-muted);
-    }
-
-    /* services */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .service-card {
-      background-color: var(--wm-card);
-      border-radius: 14px;
-      padding: 16px 16px 14px;
-      border: 1px solid var(--wm-border);
-      box-shadow: 0 10px 26px rgba(15, 35, 52, 0.08);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .service-title {
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .service-list {
-      font-size: 13px;
-      color: var(--wm-muted);
-      display: grid;
-      gap: 4px;
-    }
-
-    .service-list li {
-      list-style: none;
-      display: flex;
-      gap: 6px;
-      align-items: flex-start;
-    }
-
-    .service-list li::before {
-      content: "•";
-      color: var(--wm-primary);
-      margin-top: -1px;
-    }
-
-    .service-cta {
-      margin-top: 4px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--wm-primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* why choose */
-
-    .why-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 2.2fr);
-      gap: 24px;
-      align-items: flex-start;
-    }
-
-    .why-list {
-      display: grid;
-      gap: 10px;
-      font-size: 14px;
-    }
-
-    .why-item {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .why-badge {
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      background-color: var(--wm-primary-soft);
-      color: var(--wm-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    .why-text-strong {
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .testimonial-card {
-      background-color: var(--wm-card);
-      border-radius: 14px;
-      padding: 16px 16px 14px;
-      box-shadow: 0 12px 30px rgba(15, 35, 52, 0.1);
-      border: 1px solid var(--wm-border);
-      font-size: 13px;
-      color: var(--wm-muted);
-      display: grid;
-      gap: 10px;
-    }
-
-    .testimonial-quote {
-      font-style: italic;
-    }
-
-    .testimonial-client {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: var(--wm-text);
-    }
-
-    /* pricing */
-
-    .pricing-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .pricing-card {
-      background-color: var(--wm-card);
-      border-radius: 14px;
-      padding: 18px 16px 14px;
-      border: 1px solid var(--wm-border);
-      box-shadow: 0 10px 26px rgba(15, 35, 52, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .pricing-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--wm-muted);
-    }
-
-    .pricing-price {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--wm-primary);
-    }
-
-    .pricing-note {
-      font-size: 12px;
-      color: var(--wm-muted);
-    }
-
-    /* contact */
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 2fr);
-      gap: 24px;
-      align-items: flex-start;
-    }
-
-    .contact-card {
-      background-color: var(--wm-card);
-      border-radius: 16px;
-      padding: 18px 16px 16px;
-      box-shadow: 0 12px 32px rgba(15, 35, 52, 0.12);
-      border: 1px solid var(--wm-border);
-    }
-
-    .field-group {
-      display: grid;
-      gap: 10px;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
-
-    .field {
-      display: grid;
-      gap: 4px;
-      font-size: 13px;
-    }
-
-    .field label {
-      font-weight: 500;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      border-radius: 8px;
-      border: 1px solid var(--wm-border);
-      padding: 8px 10px;
-      font-size: 13px;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.12s ease, box-shadow 0.12s ease;
-      background-color: #ffffff;
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 70px;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--wm-primary);
-      box-shadow: 0 0 0 1px rgba(0, 99, 166, 0.08);
-    }
-
-    .contact-footnote {
-      font-size: 11px;
-      color: var(--wm-muted);
-      margin-top: 6px;
-    }
-
-    .contact-info-card {
-      background-color: transparent;
-      padding: 4px 0;
-      font-size: 13px;
-      color: var(--wm-muted);
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-info-item {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .contact-info-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      background-color: var(--wm-primary-soft);
-      color: var(--wm-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    .contact-hours {
-      font-size: 12px;
-      margin-top: 4px;
-    }
-
-    .map-frame {
-      width: 100%;
-      border-radius: 12px;
-      border: 0;
-      margin-top: 8px;
-      min-height: 180px;
-      box-shadow: 0 10px 26px rgba(15, 35, 52, 0.12);
-    }
-
-    /* footer */
-
-    .footer {
-      border-top: 1px solid var(--wm-border);
-      padding-top: 18px;
-      font-size: 12px;
-      color: var(--wm-muted);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .footer a {
-      color: var(--wm-primary);
-      font-weight: 500;
-    }
-
-    /* media */
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .benefit-row,
-      .service-grid,
-      .pricing-row,
-      .contact-layout,
-      .why-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .top-bar-inner {
-        flex-wrap: wrap;
-      }
-
-      .hero-title {
-        font-size: 26px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .page-shell {
-        padding-bottom: 56px;
-      }
-
-      .hero {
-        padding-top: 28px;
-      }
-
-      .hero-card {
-        padding: 16px 14px 14px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal and Corporate Tax Filing in Mississauga | Watermark Accounting</title>
+  <meta name="description" content="Professional tax filing services for individuals and businesses in Mississauga. Fast, accurate filing with clear answers from a licensed CPA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Top Bar -->
   <header class="top-bar">
-    <div class="top-bar-inner">
-      <div class="brand">
-        <div class="brand-mark">W</div>
-        <span>Watermark</span>
-      </div>
-      <div class="top-actions">
-        <span>Call now</span>
-        <a class="top-phone" href="tel:+19055551234">(905) 555 1234</a>
-        <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-          Book a call
-        </button>
+    <div class="top-bar-content">
+      <a href="#top" class="logo">
+        <div class="logo-icon">W</div>
+        <span class="logo-text">Watermark</span>
+      </a>
+      <div class="top-bar-actions">
+        <a href="tel:+19055551234" class="phone-link">(905) 555-1234</a>
+        <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book a Call</button>
       </div>
     </div>
   </header>
 
-  <main class="page-shell">
-    <!-- hero -->
-    <section class="hero" id="top">
-      <div>
-        <div class="hero-main-tag">Tax support for Mississauga and nearby area</div>
-        <h1 class="hero-title">
-          Personal and corporate tax filing in <span>Mississauga</span>
-        </h1>
-        <p class="hero-sub">
-          Fast accurate filing with a licensed local accountant. Clear answers friendly service and support for both individuals and business owners.
-        </p>
-        <div class="hero-cta-row">
-          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-            Book a free call
-          </button>
-          <span class="hero-note">No pressure review of your situation and next steps.</span>
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Personal and Corporate Tax Filing in Mississauga</h1>
+          <p>Fast, accurate filing with clear answers. Work with a licensed accountant who understands your situation and maximizes your outcomes.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book a Free Call</button>
+            <span class="hero-note">No pressure review of your situation and next steps</span>
+          </div>
         </div>
-        <div class="hero-trust-row">
-          <div class="hero-pill">
-            <span class="hero-pill-dot"></span>
-            <span>Quick response during tax season</span>
-          </div>
-          <div class="hero-pill">
-            <span>Serving Mississauga Brampton Milton and nearby area</span>
-          </div>
+        <div class="hero-text">
+          <!-- Empty div for grid balance on desktop, content flows single column on mobile -->
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="hero-card">
-        <div class="hero-card-title">Estimate your tax plan in one call</div>
-        <div class="hero-card-sub">Answer a few questions and understand what you can expect this year.</div>
-
-        <div class="hero-card-row">
-          <div class="hero-card-stat">
-            <span class="hero-card-stat-label">Average refund clients recover</span>
-            <span class="hero-card-stat-value">$1 200</span>
-          </div>
-          <div class="hero-card-stat">
-            <span class="hero-card-stat-label">Client return rate year over year</span>
-            <span class="hero-card-stat-value">90 percent</span>
-          </div>
-        </div>
-
-        <div class="hero-card-list">
-          <span><span class="bullet-dot"></span>Personal and corporate filing</span>
-          <span><span class="bullet-dot"></span>Support for Canada Revenue Agency questions and letters</span>
-          <span><span class="bullet-dot"></span>Guidance on future planning not just this year</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- what you get -->
-    <section class="section" id="benefits">
+  <!-- What You Receive Section -->
+  <section id="benefits">
+    <div class="container">
       <div class="section-header">
-        <div class="section-kicker">What you receive</div>
-        <h2 class="section-title">Clear tax support in plain language</h2>
-        <p class="section-sub">
-          People come to Watermark to get taxes done right without wasting time reading long pages of legal text. Here is what you actually receive.
-        </p>
+        <h2>What You Receive</h2>
+        <p>Clear tax support in plain language. People come to Watermark to get taxes done right without wasting time reading long pages of legal text.</p>
       </div>
-      <div class="benefit-row">
+      <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-icon">✅</div>
-          <div class="benefit-title">Accurate filing</div>
-          <div class="benefit-text">
-            Returns checked by a certified accountant so you avoid costly mistakes and missed forms.
-          </div>
+          <h3>Accurate Filing</h3>
+          <p>Returns checked by a certified accountant so you avoid costly mistakes and missed forms.</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">📈</div>
-          <div class="benefit-title">Better outcomes</div>
-          <div class="benefit-text">
-            Focus on every credit and deduction you qualify for to reduce what you owe or increase your refund.
-          </div>
+          <h3>Better Outcomes</h3>
+          <p>Focus on every credit and deduction you qualify for to reduce what you owe or increase your refund.</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">📞</div>
-          <div class="benefit-title">Straight answers</div>
-          <div class="benefit-text">
-            Ask anything about your situation. You get direct advice not generic tips from a search engine.
-          </div>
+          <h3>Straight Answers</h3>
+          <p>Ask anything about your situation. You get direct advice, not generic tips from a search engine.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- services -->
-    <section class="section" id="services">
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
       <div class="section-header">
-        <div class="section-kicker">Services</div>
-        <h2 class="section-title">Support for both individuals and business owners</h2>
-        <p class="section-sub">
-          Choose the service that fits you. Each service can be combined in one plan if you run a company and file personal returns.
-        </p>
+        <h2>Services</h2>
+        <p>Support for both individuals and business owners. Each service can be combined in one plan if you run a company and file personal returns.</p>
       </div>
-
-      <div class="service-grid">
+      <div class="services-grid">
         <article class="service-card">
           <div>
-            <div class="service-title">Personal tax filing</div>
-            <ul class="service-list">
-              <li>Employment and simple self employed income</li>
+            <h3>Personal Tax Filing</h3>
+            <ul>
+              <li>Employment and simple self-employed income</li>
               <li>RRSP and investment slips organized for you</li>
-              <li>Support for tuition rent and other credits</li>
+              <li>Support for tuition, rent, and other credits</li>
             </ul>
           </div>
-          <a href="#contact" class="service-cta">Book personal tax call →</a>
+          <a href="#contact" class="service-link">Book personal tax call →</a>
         </article>
 
         <article class="service-card">
           <div>
-            <div class="service-title">Corporate tax filing</div>
-            <ul class="service-list">
-              <li>Year end returns for small to medium corporations</li>
+            <h3>Corporate Tax Filing</h3>
+            <ul>
+              <li>Year-end returns for small to medium corporations</li>
               <li>Financial statements and guidance on retained earnings</li>
               <li>Planning for salary versus dividend mix</li>
             </ul>
           </div>
-          <a href="#contact" class="service-cta">Talk about your company →</a>
+          <a href="#contact" class="service-link">Talk about your company →</a>
         </article>
 
         <article class="service-card">
           <div>
-            <div class="service-title">HST and sales tax</div>
-            <ul class="service-list">
+            <h3>HST and Sales Tax</h3>
+            <ul>
               <li>Return filing and deadline reminders</li>
               <li>Help with late or missed filings</li>
               <li>Setup for new business registrations</li>
             </ul>
           </div>
-          <a href="#contact" class="service-cta">Ask about HST setup →</a>
+          <a href="#contact" class="service-link">Ask about HST setup →</a>
         </article>
 
         <article class="service-card">
           <div>
-            <div class="service-title">Bookkeeping</div>
-            <ul class="service-list">
-              <li>Monthly records so year end returns are painless</li>
+            <h3>Bookkeeping</h3>
+            <ul>
+              <li>Monthly records so year-end returns are painless</li>
               <li>Cloud software that works with your bank feeds</li>
               <li>Clean reports for lenders and investors</li>
             </ul>
           </div>
-          <a href="#contact" class="service-cta">Discuss bookkeeping plan →</a>
+          <a href="#contact" class="service-link">Discuss bookkeeping plan →</a>
         </article>
 
         <article class="service-card">
           <div>
-            <div class="service-title">Payroll support</div>
-            <ul class="service-list">
+            <h3>Payroll Support</h3>
+            <ul>
               <li>Pay runs for salaried and hourly staff</li>
-              <li>T4 T4A and ROE preparation</li>
+              <li>T4, T4A, and ROE preparation</li>
               <li>Advice on source deductions and remittance</li>
             </ul>
           </div>
-          <a href="#contact" class="service-cta">Talk about payroll →</a>
+          <a href="#contact" class="service-link">Talk about payroll →</a>
         </article>
 
         <article class="service-card">
           <div>
-            <div class="service-title">Non resident and cross border</div>
-            <ul class="service-list">
+            <h3>Non-Resident and Cross-Border</h3>
+            <ul>
               <li>Support for rental or investment income from Canada</li>
               <li>Guidance when you move in or out of the country</li>
               <li>Help dealing with Canada Revenue Agency letters</li>
             </ul>
           </div>
-          <a href="#contact" class="service-cta">Book non resident consult →</a>
+          <a href="#contact" class="service-link">Book non-resident consult →</a>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- why choose -->
-    <section class="section" id="why">
+  <!-- Why Choose Section -->
+  <section id="why">
+    <div class="container">
       <div class="section-header">
-        <div class="section-kicker">Why clients stay with Nabeel</div>
-        <h2 class="section-title">An accountant who treats your money like his own</h2>
-        <p class="section-sub">
-          You are not just buying a one time return. You are building a relationship with a planner who understands your full financial story.
-        </p>
+        <h2>Why Clients Stay with Nabeel</h2>
+        <p>You're not just buying a one-time return. You're building a relationship with a planner who understands your full financial story.</p>
       </div>
+      <div class="why-content">
+        <div class="trust-points">
+          <div class="trust-point">
+            <div class="trust-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Licensed CPA</h3>
+              <p>Professional standards and current knowledge of Canadian tax law.</p>
+            </div>
+          </div>
 
-      <div class="why-layout">
-        <div class="why-list">
-          <div class="why-item">
-            <div class="why-badge">🎓</div>
+          <div class="trust-point">
+            <div class="trust-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
             <div>
-              <div class="why-text-strong">Licensed CPA</div>
-              <div>Professional standards and current knowledge of Canadian tax law.</div>
+              <h3>Ten Plus Years with Real Clients</h3>
+              <p>Experience with individuals, family trusts, self-employed and corporate owners.</p>
             </div>
           </div>
-          <div class="why-item">
-            <div class="why-badge">📚</div>
-            <div>
-              <div class="why-text-strong">Ten plus years with real clients</div>
-              <div>Experience with individuals family trusts self employed and corporate owners.</div>
+
+          <div class="trust-point">
+            <div class="trust-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
             </div>
-          </div>
-          <div class="why-item">
-            <div class="why-badge">📍</div>
             <div>
-              <div class="why-text-strong">Local to Mississauga and nearby area</div>
-              <div>Understands local employers lenders and the situations people face here.</div>
+              <h3>Local to Mississauga and Nearby Area</h3>
+              <p>Understands local employers, lenders, and the situations people face here.</p>
             </div>
           </div>
         </div>
 
-        <aside class="testimonial-card">
+        <div class="testimonial-card">
           <div class="testimonial-quote">
-            “I had tried filing on my own and always felt unsure. After moving to Nabeel I finally know where I stand each year and I can plan with confidence.”
+            "I had tried filing on my own and always felt unsure. After moving to Nabeel I finally know where I stand each year and I can plan with confidence."
           </div>
-          <div class="testimonial-client">
-            <div>
-              <strong>Mark S</strong>  
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Mark S.</strong>
               <div>Small business owner in Mississauga</div>
             </div>
-            <div>Client for five plus years</div>
+            <div class="author-badge">Client for five plus years</div>
           </div>
-        </aside>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- pricing -->
-    <section class="section" id="pricing">
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="container">
       <div class="section-header">
-        <div class="section-kicker">Simple starting points</div>
-        <h2 class="section-title">Clear pricing for common situations</h2>
-        <p class="section-sub">
-          Every return is different but most clients fit into one of these ranges. You will receive a final quote before any work begins.
-        </p>
+        <h2>Pricing</h2>
+        <p>Every return is different, but most clients fit into one of these ranges. You will receive a final quote before any work begins.</p>
       </div>
-
-      <div class="pricing-row">
+      <div class="pricing-grid">
         <div class="pricing-card">
-          <div class="pricing-label">Personal returns</div>
-          <div class="pricing-price">From $99</div>
-          <div class="pricing-note">
-            For straightforward employment income students new grads and retirees with simple slips.
-          </div>
+          <div class="pricing-label">Personal Returns</div>
+          <div class="pricing-amount">From $99</div>
+          <div class="pricing-description">For straightforward employment income, students, new grads, and retirees with simple slips.</div>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-label">Self-Employed and Rental</div>
+          <div class="pricing-amount">From $249</div>
+          <div class="pricing-description">For contractors, gig workers, and landlords who need books organized along with their return.</div>
         </div>
 
         <div class="pricing-card">
-          <div class="pricing-label">Self employed and rental</div>
-          <div class="pricing-price">From $249</div>
-          <div class="pricing-note">
-            For contractors gig workers and landlords who need books organized along with their return.
-          </div>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-label">Corporate returns</div>
-          <div class="pricing-price">From $399</div>
-          <div class="pricing-note">
-            Includes corporate tax filing and financial statement package for lenders and investors.
-          </div>
+          <div class="pricing-label">Corporate Returns</div>
+          <div class="pricing-amount">From $399</div>
+          <div class="pricing-description">Includes corporate tax filing and financial statement package for lenders and investors.</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- contact -->
-    <section class="section" id="contact">
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
       <div class="section-header">
-        <div class="section-kicker">Contact</div>
-        <h2 class="section-title">Book a free call</h2>
-        <p class="section-sub">
-          Share a few details and we will reach out with a short call to confirm your needs and timing. No obligation.
-        </p>
+        <h2>Book a Free Call</h2>
+        <p>Share a few details and we will reach out with a short call to confirm your needs and timing. No obligation.</p>
       </div>
-
-      <div class="contact-layout">
-        <form class="contact-card">
-          <div class="field-group">
-            <div class="field">
+      <div class="contact-wrapper">
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group">
               <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your full name" required />
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
             </div>
-            <div class="field">
+
+            <div class="form-group">
               <label for="phone">Phone</label>
-              <input id="phone" type="tel" placeholder="Best number to reach you" required />
+              <input type="tel" id="phone" name="phone" placeholder="Best number to reach you" required>
             </div>
-            <div class="field">
+
+            <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com" required />
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
-            <div class="field">
-              <label for="service">What service do you need</label>
-              <select id="service">
+
+            <div class="form-group">
+              <label for="service">What service do you need?</label>
+              <select id="service" name="service" required>
                 <option value="">Select one</option>
-                <option>Personal tax filing</option>
-                <option>Corporate tax filing</option>
-                <option>HST and sales tax</option>
-                <option>Bookkeeping</option>
-                <option>Payroll</option>
-                <option>Non resident or cross border</option>
-                <option>Not sure yet</option>
+                <option value="personal">Personal tax filing</option>
+                <option value="corporate">Corporate tax filing</option>
+                <option value="hst">HST and sales tax</option>
+                <option value="bookkeeping">Bookkeeping</option>
+                <option value="payroll">Payroll</option>
+                <option value="non-resident">Non-resident or cross-border</option>
+                <option value="not-sure">Not sure yet</option>
               </select>
             </div>
-            <div class="field">
-              <label for="message">Anything else we should know</label>
-              <textarea id="message" placeholder="Share a short note about your situation"></textarea>
+
+            <div class="form-group">
+              <label for="details">Extra details</label>
+              <textarea id="details" name="details" placeholder="Share a short note about your situation"></textarea>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Request my call
-          </button>
-          <div class="contact-footnote">
-            We respect your time and privacy. Your details are used only to respond to your request.
-          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Request My Call</button>
+          <p class="form-note">We respect your time and privacy. Your details are used only to respond to your request.</p>
         </form>
 
-        <div class="contact-info-card">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📍</div>
-            <div>
-              <strong>Office</strong>
-              <div>3120 Glen Erin Drive unit 2</div>
-              <div>Mississauga Ontario L5L 1R6</div>
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="info-content">
+              <h3>Office</h3>
+              <p>3120 Glen Erin Drive, Unit 2<br>Mississauga, Ontario L5L 1R6</p>
               <iframe
-                class="map-frame"
-                loading="lazy"
+                class="map-embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.8755059858394!2d-79.687!3d43.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNDPCsDMyJzM2LjAiTiA3OcKwNDEnMTMuMCJX!5e0!3m2!1sen!2sca!4v0000000000000"
                 allowfullscreen
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.8755059858394!2d-79.687!3d43.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNDPCsDMyJzM2LjAiTiA3OcKwNDEnMTMuMCJX!5e0!3m2!1sen!2sca!4v0000000000000">
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
           </div>
 
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📞</div>
-            <div>
-              <strong>Call or text</strong>
-              <div><a href="tel:+19055551234">(905) 555 1234</a></div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="info-content">
+              <h3>Call or Text</h3>
+              <p><a href="tel:+19055551234">(905) 555-1234</a></p>
             </div>
           </div>
 
-          <div class="contact-info-item">
-            <div class="contact-info-icon">⏰</div>
-            <div>
-              <strong>Hours during tax season</strong>
-              <div class="contact-hours">
-                Monday to Friday: 9 am to 7 pm<br />
-                Saturday: 10 am to 3 pm<br />
-                Sunday and evenings by appointment
-              </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="info-content">
+              <h3>Hours During Tax Season</h3>
+              <p>Monday to Friday: 9 AM to 7 PM<br>Saturday: 10 AM to 3 PM<br>Sunday and evenings by appointment</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- footer -->
-    <footer class="footer">
-      <span>© <span id="year"></span> Watermark Accounting Services. All rights reserved.</span>
-      <span>Serving clients in Mississauga Brampton Milton and nearby area.</span>
-    </footer>
-  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Watermark Accounting Services. All rights reserved. Serving clients in Mississauga, Brampton, Milton, and nearby area.</p>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
