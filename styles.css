@@ -57,27 +57,23 @@ body {
   gap: 20px;
 }
 
-.logo {
+.logo-link {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--primary-blue);
   text-decoration: none;
+  line-height: 0;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--primary-blue);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
-  border-radius: 4px;
+.logo-full {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.logo-short {
+  height: 44px;
+  width: auto;
+  display: none;
 }
 
 .top-bar-actions {
@@ -618,6 +614,15 @@ footer {
     display: none;
   }
 
+  .logo-full {
+    display: none;
+  }
+
+  .logo-short {
+    display: block;
+    height: 40px;
+  }
+
   .hero {
     padding: 60px 0;
   }
@@ -683,8 +688,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .logo-text {
-    display: none;
+  .logo-short {
+    height: 36px;
   }
 
   .hero-text h1 {

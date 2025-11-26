@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#003D6B" rx="8"/>
+
+  <!-- Centered wave mark icon -->
+  <g transform="translate(32, 32)">
+    <!-- Water wave marks -->
+    <path d="M-12 -2 Q-6 -8 0 -2 T12 -2" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M-12 6 Q-6 0 0 6 T12 6" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+</svg>

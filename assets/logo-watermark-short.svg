@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 56" fill="none">
+  <!-- Icon - Abstract water mark with vertical bars suggesting accounting/finance -->
+  <g id="icon">
+    <!-- Circular container -->
+    <circle cx="24" cy="28" r="20" fill="#003D6B"/>
+    <!-- Inner water wave mark -->
+    <path d="M14 28 Q19 23 24 28 T34 28" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M14 33 Q19 28 24 33 T34 33" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Text: Watermark -->
+  <text x="54" y="35" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#003D6B" letter-spacing="-0.02em">
+    Watermark
+  </text>
+</svg>
