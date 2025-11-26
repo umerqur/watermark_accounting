@@ -1,0 +1,17 @@
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Checkmark in Circle Icon -->
+  <g>
+    <circle cx="26" cy="30" r="20" stroke="#003D6B" stroke-width="3.5" fill="none"/>
+    <path d="M16 30L23 37L36 24"
+          stroke="#00A9A5"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text: Watermark -->
+  <text x="64" y="34" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="700" fill="#003D6B" letter-spacing="-0.02em">Watermark</text>
+
+  <!-- Text: TAXES -->
+  <text x="64" y="48" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#00A9A5" letter-spacing="0.12em">TAXES</text>
+</svg>
