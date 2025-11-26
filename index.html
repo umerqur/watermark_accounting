@@ -9,68 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-  /* force header look */
-  .top-bar {
-    padding: 8px 0;
-  }
-
-  .top-bar img.logo {
-    height: 64px;
-    width: auto;
-  }
-
-  .top-bar-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-
-  .top-bar-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .phone-link {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 16px;
-  }
-
-  @media (max-width: 768px) {
-    .top-bar {
-      padding: 6px 0;
-    }
-
-    .top-bar img.logo {
-      height: 56px;
-    }
-
-    .top-bar-actions {
-      gap: 10px;
-    }
-
-    .phone-link {
-      display: inline-block;
-    }
-  }
-
-  /* force pricing back to one row on desktop */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  @media (max-width: 768px) {
-    .pricing-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-
 </head>
 <body>
 
@@ -140,7 +78,7 @@
       <div class="pricing-grid">
         <div class="pricing-card">
           <div class="pricing-label">Personal Returns</div>
-          <div class="pricing-amount">From $75</div>
+          <div class="pricing-amount">From $99</div>
           <div class="pricing-description">For straightforward employment income, students, new grads, and retirees with simple slips.</div>
         </div>
 
@@ -152,8 +90,8 @@
 
         <div class="pricing-card">
           <div class="pricing-label">Corporate Returns</div>
-          <div class="pricing-amount">From $500</div>
-          <div class="pricing-description">Includes corporate tax filing, bookkeeping support, and a full financial statement package for lenders and investors.</div>
+          <div class="pricing-amount">From $399</div>
+          <div class="pricing-description">Includes corporate tax filing and financial statement package for lenders and investors.</div>
         </div>
       </div>
     </div>
@@ -237,6 +175,18 @@
             </ul>
           </div>
           <a href="#contact" class="service-link">Book non-resident consult →</a>
+        </article>
+
+        <article class="service-card">
+          <div>
+            <h3>Business Financing</h3>
+            <ul>
+              <li>Professional business plan creation and review</li>
+              <li>Financial statement preparation for lenders</li>
+              <li>Complete funding application support from $3000</li>
+            </ul>
+          </div>
+          <a href="financing.html" class="service-link">Explore financing services →</a>
         </article>
       </div>
     </div>
