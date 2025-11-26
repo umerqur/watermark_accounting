@@ -9,6 +9,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+  /* force header look */
+  .top-bar {
+    padding: 8px 0;
+  }
+
+  .top-bar img.logo {
+    height: 64px;
+    width: auto;
+  }
+
+  .top-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .phone-link {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .top-bar {
+      padding: 6px 0;
+    }
+
+    .top-bar img.logo {
+      height: 56px;
+    }
+
+    .top-bar-actions {
+      gap: 10px;
+    }
+
+    .phone-link {
+      display: inline-block;
+    }
+  }
+
+  /* force pricing back to one row on desktop */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 </head>
 <body>
 
