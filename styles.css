@@ -61,23 +61,39 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--primary-blue);
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.85;
 }
 
 .logo-icon {
   width: 40px;
   height: 40px;
-  background: var(--primary-blue);
-  color: white;
+  flex-shrink: 0;
+}
+
+.logo-text-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.1;
+}
+
+.logo-text-primary {
+  font-size: 20px;
   font-weight: 700;
-  font-size: 18px;
-  border-radius: 4px;
+  color: var(--primary-blue);
+}
+
+.logo-text-secondary {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .top-bar-actions {
@@ -681,7 +697,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .logo-text {
+  .logo-text-container {
     display: none;
   }
 
