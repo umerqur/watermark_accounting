@@ -51,11 +51,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
-  max-width: 1200px;
+  padding: 8px 24px;
   margin: 0 auto;
   gap: 20px;
 }
+
 
 .logo {
   display: flex;
@@ -69,23 +69,29 @@ body {
   opacity: 0.85;
 }
 
-header img.logo {
-  width: 180px;
+header img.logo,
+.logo-image {
+  width: 200px;
   height: auto;
   display: block;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
+/* tablet */
+@media (max-width: 768px) {
+  header img.logo,
+  .logo-image {
+    width: 150px;
+  }
 }
 
-.logo-image {
-  width: 180px;
-  height: auto;
-  flex-shrink: 0;
+/* mobile */
+@media (max-width: 480px) {
+  header img.logo,
+  .logo-image {
+    width: 120px;
+  }
 }
+
 
 .logo-text-container {
   display: flex;
