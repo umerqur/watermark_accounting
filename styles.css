@@ -722,3 +722,16 @@ footer {
     padding: 24px 20px;
   }
 }
+/* Restore 3 column layout for pricing */
+.pricing-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 32px !important;
+}
+
+/* Cards stack cleanly on mobile */
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
