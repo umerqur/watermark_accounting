@@ -660,7 +660,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 4px 12px;
+    padding: 4px 12px 4px 0;
     gap: 8px;
   }
 
@@ -761,7 +761,7 @@ footer {
 
 @media (max-width: 480px) {
   .top-bar-content {
-    padding: 3px 10px;
+    padding: 3px 10px 3px 0;
   }
 
   header img.logo {
