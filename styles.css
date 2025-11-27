@@ -648,17 +648,29 @@ footer {
     padding: 0 16px;
   }
 
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-white);
+  }
+
   .top-bar-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 8px 12px;
+    gap: 8px;
   }
 
   header img.logo {
-    width: 100px;
+    width: 130px;
     height: auto;
+  }
+
+  .logo {
+    margin-right: auto;
   }
 
   .logo-image {
@@ -677,6 +689,7 @@ footer {
 
   .phone-link {
     font-size: 18px;
+    white-space: nowrap;
   }
 
   .hero {
@@ -745,8 +758,13 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .top-bar-content {
+    padding: 6px 10px;
+  }
+
   header img.logo {
-    width: 120px;
+    width: 140px;
+    height: auto;
   }
 
   .logo-image {
