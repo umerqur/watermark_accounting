@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 72px;
+  padding-top: 60px; /* match the new, shorter header */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* slimmer than before */
+  padding: 4px 20px; /* smaller vertical padding for a thinner bar */
   max-width: 1200px;
   margin: 0 auto;
   gap: 16px;
@@ -660,7 +660,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 12px;
+    padding: 4px 12px;
     gap: 8px;
   }
 
@@ -761,7 +761,7 @@ footer {
 
 @media (max-width: 480px) {
   .top-bar-content {
-    padding: 6px 10px;
+    padding: 3px 10px;
   }
 
   header img.logo {
