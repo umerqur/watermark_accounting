@@ -455,8 +455,9 @@ section {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: 32px;
+  justify-content: center;
 }
 
 .pricing-card {
@@ -471,10 +472,10 @@ section {
 }
 
 .pricing-card.featured {
-  background: var(--bg-white);
-  border-color: var(--accent-teal);
-  box-shadow: var(--shadow-lg);
-  transform: scale(1.05);
+  background: var(--bg-light);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transform: none;
 }
 
 .pricing-label {
