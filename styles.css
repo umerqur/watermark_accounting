@@ -155,6 +155,14 @@ header img.logo {
   transform: translateY(-1px);
 }
 
+.hero .btn-primary {
+  background-color: var(--primary-blue);
+}
+
+.hero .btn-primary:hover {
+  background-color: var(--primary-blue-dark);
+}
+
 .btn-outline {
   background-color: transparent;
   color: var(--primary-blue);
@@ -642,14 +650,14 @@ footer {
 
   .top-bar-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
     padding: 16px;
   }
 
   header img.logo {
-    width: 150px;
+    width: 100px;
     height: auto;
   }
 
@@ -659,16 +667,16 @@ footer {
 
   .top-bar-actions {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 100%;
+  }
+
+  .top-bar-actions .btn-outline {
+    display: none;
   }
 
   .phone-link {
-    display: block;
     font-size: 18px;
-    text-align: center;
   }
 
   .hero {
