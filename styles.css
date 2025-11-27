@@ -44,22 +44,29 @@ body {
 
 /* Top Bar */
 .top-bar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background-color: var(--bg-white);
   border-bottom: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
+}
+
+/* add space so content does not hide behind fixed header */
+body {
+  padding-top: 72px;
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: 10px 20px; /* slimmer than before */
   max-width: 1200px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 16px;
 }
 
 .logo {
@@ -648,13 +655,6 @@ footer {
     padding: 0 16px;
   }
 
-  .top-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: var(--bg-white);
-  }
-
   .top-bar-content {
     display: flex;
     flex-direction: row;
@@ -665,7 +665,8 @@ footer {
   }
 
   header img.logo {
-    width: 130px;
+    width: 150px;
+    max-width: none;
     height: auto;
   }
 
@@ -674,7 +675,8 @@ footer {
   }
 
   .logo-image {
-    width: 100px;
+    width: 150px;
+    height: auto;
   }
 
   .top-bar-actions {
@@ -763,12 +765,14 @@ footer {
   }
 
   header img.logo {
-    width: 140px;
+    width: 150px;
+    max-width: none;
     height: auto;
   }
 
   .logo-image {
-    width: 80px;
+    width: 150px;
+    height: auto;
   }
 
   .logo-text-container {
