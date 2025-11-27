@@ -82,7 +82,7 @@ body {
 }
 
 header img.logo {
-  max-width: 190px;
+  max-width: 210px;
   height: auto;
 }
 
@@ -631,12 +631,6 @@ footer {
   width: 24px;
   height: 24px;
   fill: currentColor;
-}
-
-/* Left alignment fix */
-.top-bar-content,
-.hero {
-  padding-left: 40px;
 }
 
 /* Responsive Design */
