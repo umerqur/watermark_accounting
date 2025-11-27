@@ -133,6 +133,10 @@ header img.logo {
   white-space: nowrap;
 }
 
+.top-bar-content .logo img {
+  margin-left: -8px;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -694,6 +698,10 @@ footer {
     white-space: nowrap;
   }
 
+  .top-bar-content .logo img {
+    margin-left: -10px;
+  }
+
   .hero {
     padding: 60px 0;
   }
@@ -777,6 +785,10 @@ footer {
 
   .logo-text-container {
     display: none;
+  }
+
+  .top-bar-content .logo img {
+    margin-left: -12px;
   }
 
   .hero-text h1 {
