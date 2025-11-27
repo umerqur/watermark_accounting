@@ -82,7 +82,7 @@ body {
 }
 
 header img.logo {
-  max-width: 260px;
+  max-width: 170px;
   height: auto;
 }
 
@@ -665,7 +665,7 @@ footer {
   }
 
   header img.logo {
-    width: 150px;
+    width: 120px;
     max-width: none;
     height: auto;
   }
@@ -765,7 +765,7 @@ footer {
   }
 
   header img.logo {
-    width: 130px;
+    width: 105px;
     max-width: none;
     height: auto;
   }
