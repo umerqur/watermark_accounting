@@ -774,36 +774,28 @@ footer {
   }
 
   .hero {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 40px;
   }
 
   .hero-text h1 {
     font-size: 32px;
-    margin-bottom: 12px;
   }
 
   .hero-text p {
     font-size: 18px;
-    margin-bottom: 20px;
   }
 
   section {
-    padding: 40px 0;
-  }
-
-  .section-header {
-    text-align: left;
-    margin-bottom: 32px;
+    padding: 60px 0;
   }
 
   .section-header h2 {
     font-size: 28px;
-    margin-bottom: 8px;
   }
 
   .section-header p {
@@ -813,54 +805,33 @@ footer {
   .benefits-grid,
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .benefit-card {
-    padding: 24px 20px;
-  }
-
-  .benefit-card h3 {
-    margin-bottom: 6px;
-  }
-
-  .service-card {
-    padding: 24px;
-    gap: 12px;
+    gap: 24px;
   }
 
   .pricing-grid {
     flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
+    align-items: center;
+    gap: 24px;
   }
 
   .pricing-card {
-    max-width: 100%;
-    margin: 0;
-    text-align: left;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .why-content {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .trust-points {
-    gap: 20px;
-  }
-
-  .trust-point h3 {
-    margin-bottom: 4px;
+    gap: 32px;
   }
 
   .contact-wrapper {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
   }
 
   .contact-form {
-    padding: 24px 20px;
+    padding: 32px 24px;
   }
 
   .pricing-card.featured {
@@ -880,92 +851,34 @@ footer {
   /* Mobile layout for Additional Services */
   .additional-services-features {
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 20px;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
   }
 
   .additional-service-item {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     max-width: 100%;
-  }
-
-  .additional-service-icon {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 6px;
-  }
-
-  .additional-service-item h3 {
-    text-align: left;
-    margin-bottom: 4px;
-  }
-
-  .additional-service-item p {
-    text-align: left;
-    margin: 0;
-  }
-
-  .additional-services-note {
-    text-align: left;
-    margin-top: 24px;
   }
 }
 
 @media (max-width: 640px) {
-  /* Further reduce vertical spacing on smaller mobile devices */
-  section {
-    padding: 32px 0;
-  }
-
-  .section-header {
-    margin-bottom: 24px;
-  }
-
-  .hero {
-    padding: 32px 0;
-  }
-
-  .hero-content {
-    gap: 20px;
-  }
-
-  .hero-text h1 {
-    margin-bottom: 10px;
-  }
-
-  .hero-text p {
-    margin-bottom: 16px;
-  }
-
-  .benefits-grid,
-  .services-grid {
+  /* Reduce vertical spacing for Additional Services on mobile */
+  .additional-services-features {
     gap: 12px;
   }
 
-  .additional-services-features {
-    gap: 16px;
-  }
-
   .additional-service-icon {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .additional-service-item h3 {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .additional-services-note {
     margin-top: 20px;
-  }
-
-  .trust-points {
-    gap: 16px;
-  }
-
-  .pricing-grid {
-    gap: 12px;
   }
 }
 
@@ -989,64 +902,17 @@ footer {
     display: none;
   }
 
-  section {
-    padding: 28px 0;
-  }
-
-  .section-header {
-    margin-bottom: 20px;
+  .hero-text h1 {
+    font-size: 28px;
   }
 
   .section-header h2 {
     font-size: 24px;
-    margin-bottom: 6px;
-  }
-
-  .hero {
-    padding: 28px 0;
-  }
-
-  .hero-content {
-    gap: 16px;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-
-  .hero-text p {
-    margin-bottom: 14px;
-  }
-
-  .benefits-grid,
-  .services-grid {
-    gap: 10px;
   }
 
   .benefit-card,
   .service-card,
   .pricing-card {
-    padding: 20px 16px;
-  }
-
-  .benefit-card h3 {
-    margin-bottom: 4px;
-  }
-
-  .trust-points {
-    gap: 14px;
-  }
-
-  .trust-point h3 {
-    margin-bottom: 3px;
-  }
-
-  .additional-services-features {
-    gap: 14px;
-  }
-
-  .pricing-grid {
-    gap: 10px;
+    padding: 24px 20px;
   }
 }
