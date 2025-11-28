@@ -454,8 +454,8 @@ section {
 }
 
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 32px;
 }
 
@@ -468,13 +468,14 @@ section {
   flex-direction: column;
   gap: 16px;
   transition: all 0.2s ease;
+  flex: 0 1 360px;
 }
 
 .pricing-card.featured {
-  background: var(--bg-white);
-  border-color: var(--accent-teal);
-  box-shadow: var(--shadow-lg);
-  transform: scale(1.05);
+  background: var(--bg-light);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transform: none;
 }
 
 .pricing-label {
@@ -793,10 +794,14 @@ footer {
   }
 
   .benefits-grid,
-  .services-grid,
-  .pricing-grid {
+  .services-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .pricing-grid {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .why-content {
