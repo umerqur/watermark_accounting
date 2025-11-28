@@ -848,19 +848,22 @@ footer {
   }
 
   /* Mobile spacing for Additional Services */
-  .additional-services {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .additional-services-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .additional-services-features {
     flex-direction: column;
-    gap: 16px;
-    margin-top: 12px;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    margin-top: 8px;
   }
 
   .additional-service-item {
     max-width: 100%;
+    margin: 0;
   }
 
   .additional-service-icon {
@@ -869,10 +872,13 @@ footer {
 
   .additional-service-item h3 {
     margin-bottom: 2px;
+    text-align: center;
   }
 
   .additional-service-item p {
-    margin-top: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 1.35;
   }
 }
 
@@ -922,17 +928,13 @@ footer {
     font-size: 14px;
   }
 
-  .additional-services {
-    padding-top: 12px;
-    padding-bottom: 12px;
+  .additional-services-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .additional-services-features {
-    gap: 12px;
-    margin-top: 8px;
-  }
-
-  .additional-service-item p {
-    line-height: 1.35;
+    gap: 8px;
+    margin-top: 6px;
   }
 }
