@@ -365,19 +365,19 @@ section {
 .trust-point {
   display: flex;
   gap: 20px;
+  align-items: flex-start;
 }
 
 .trust-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--primary-blue);
-  color: white;
-  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: var(--accent-teal);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  font-size: 24px;
+  background: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .trust-point h3 {
