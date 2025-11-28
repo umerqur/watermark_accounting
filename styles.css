@@ -1,4 +1,4 @@
-/* Watermark Accounting - Professional Landing Page Styles */
+/* Watermark Accounting Professional Landing Page Styles */
 
 :root {
   --primary-blue: #003D6B;
@@ -34,6 +34,7 @@ body {
   background-color: var(--bg-light);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  padding-top: 60px; /* accounts for fixed header */
 }
 
 .container {
@@ -43,6 +44,7 @@ body {
 }
 
 /* Top Bar */
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -54,16 +56,11 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-/* add space so content does not hide behind fixed header */
-body {
-  padding-top: 60px; /* match the new, shorter header */
-}
-
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 20px; /* smaller vertical padding for a thinner bar */
+  padding: 4px 20px;
   max-width: 1200px;
   margin: 0 auto;
   gap: 16px;
@@ -134,6 +131,7 @@ header img.logo {
 }
 
 /* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -174,6 +172,7 @@ header img.logo {
 }
 
 /* Hero Section */
+
 .hero {
   padding: 80px 0;
   background: linear-gradient(135deg, #F8F9FB 0%, #FFFFFF 100%);
@@ -215,7 +214,8 @@ header img.logo {
   margin-left: 4px;
 }
 
-/* Section */
+/* Generic Section */
+
 section {
   padding: 80px 0;
 }
@@ -240,6 +240,7 @@ section {
 }
 
 /* Benefits Section */
+
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -273,6 +274,7 @@ section {
 }
 
 /* Services Section */
+
 #services {
   background-color: var(--bg-white);
   padding: 64px 0;
@@ -342,6 +344,7 @@ section {
 }
 
 /* Why Section */
+
 .why-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -428,6 +431,7 @@ section {
 }
 
 /* Pricing Section */
+
 #pricing {
   background-color: var(--bg-white);
 }
@@ -440,7 +444,7 @@ section {
 
 .pricing-card {
   background: var(--bg-light);
-  border: 2px solid var(--accent-teal);
+  border: 2px solid var(--accent-teal); /* teal outline */
   border-radius: 8px;
   padding: 40px 32px;
   display: flex;
@@ -478,6 +482,7 @@ section {
 }
 
 /* Contact Section */
+
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -597,6 +602,7 @@ section {
 }
 
 /* Footer */
+
 footer {
   background: var(--bg-white);
   border-top: 1px solid var(--border-light);
@@ -607,6 +613,7 @@ footer {
 }
 
 /* SVG Icons */
+
 .icon-svg {
   width: 24px;
   height: 24px;
@@ -614,6 +621,7 @@ footer {
 }
 
 /* Additional Services Section */
+
 .additional-services {
   max-width: 720px;
   margin: 0 auto;
@@ -639,7 +647,7 @@ footer {
   color: var(--text-secondary);
 }
 
-/* Additional Services strip */
+/* Additional Services icons row */
 
 .additional-services-features {
   display: flex;
@@ -659,7 +667,7 @@ footer {
 }
 
 .additional-service-icon {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -680,39 +688,28 @@ footer {
   line-height: 1.4;
   font-weight: 600;
   color: var(--primary-blue);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
 .additional-service-item p {
   font-size: 14px;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--text-secondary);
   max-width: 260px;
   margin: 0 auto;
   text-align: center;
 }
 
-.additional-service-item:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.additional-service-item:nth-child(2) {
-  animation-delay: 0.05s;
-}
-
-.additional-service-item:nth-child(3) {
-  animation-delay: 0.1s;
-}
-
 .additional-services-note {
-  margin-top: 32px;
+  margin-top: 28px;
   font-size: 14px;
   color: var(--text-muted);
   text-align: center;
 }
 
 /* Responsive Design */
+
 @media (max-width: 1024px) {
   .hero-text h1 {
     font-size: 40px;
@@ -853,7 +850,8 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 24px;
+    margin-top: 28px;
   }
 
   .additional-service-item {
