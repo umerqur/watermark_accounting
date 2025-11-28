@@ -858,8 +858,9 @@ footer {
   /* Mobile layout for Additional Services */
   .additional-services-features {
     flex-direction: column;
-    gap: 24px;
     align-items: center;
+    text-align: center;
+    gap: 32px;
   }
 
   .additional-service-item {
