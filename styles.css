@@ -34,7 +34,7 @@ body {
   background-color: var(--bg-light);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding-top: 60px; /* accounts for fixed header */
+  padding-top: 60px; /* fixed header space */
 }
 
 .container {
@@ -444,7 +444,7 @@ section {
 
 .pricing-card {
   background: var(--bg-light);
-  border: 2px solid var(--accent-teal); /* teal outline */
+  border: 2px solid var(--accent-teal);
   border-radius: 8px;
   padding: 40px 32px;
   display: flex;
@@ -571,6 +571,11 @@ section {
   font-size: 20px;
 }
 
+/* hide icon beside Office only (last info item) */
+.contact-info .info-item:last-child .info-icon {
+  display: none;
+}
+
 .info-content h3 {
   font-size: 16px;
   font-weight: 600;
@@ -654,7 +659,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   gap: 56px;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .additional-service-item {
@@ -667,7 +672,7 @@ footer {
 }
 
 .additional-service-icon {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -847,38 +852,17 @@ footer {
     padding: 0 24px;
   }
 
-  /* Mobile spacing for Additional Services */
-  .additional-services-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
+  /* Additional Services mobile layout */
   .additional-services-features {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
-    margin-top: 8px;
+    gap: 16px;         /* tight gap between cards */
+    margin-top: 16px;  /* small space after intro text */
   }
 
   .additional-service-item {
     max-width: 100%;
-    margin: 0;
-  }
-
-  .additional-service-icon {
-    margin-bottom: 4px;
-  }
-
-  .additional-service-item h3 {
-    margin-bottom: 2px;
-    text-align: center;
-  }
-
-  .additional-service-item p {
-    margin: 0;
-    text-align: center;
-    line-height: 1.35;
   }
 }
 
@@ -911,13 +895,19 @@ footer {
   }
 
   .benefit-card,
-  .service-card {
+  .service-card,
+  .pricing-card {
     padding: 24px 20px;
   }
 
-  .pricing-card {
-    padding: 18px 18px;
-    gap: 10px;
+  /* Extra tight spacing for Additional Services on very small screens */
+  .additional-services-features {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .additional-service-item p {
+    line-height: 1.4;
   }
 
   .pricing-amount {
@@ -926,15 +916,5 @@ footer {
 
   .pricing-description {
     font-size: 14px;
-  }
-
-  .additional-services-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .additional-services-features {
-    gap: 8px;
-    margin-top: 6px;
   }
 }
