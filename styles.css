@@ -446,12 +446,12 @@ section {
   background: var(--bg-light);
   border: 2px solid var(--accent-teal);
   border-radius: 8px;
-  padding: 40px 32px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   transition: all 0.2s ease;
-  flex: 0 1 360px;
+  flex: 0 0 auto;
 }
 
 .pricing-card.featured {
