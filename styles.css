@@ -658,8 +658,9 @@ footer {
 .additional-services-features {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  margin-top: 32px;
+  align-items: flex-start;
+  gap: 56px;
+  margin-top: 40px;
 }
 
 .additional-service-item {
