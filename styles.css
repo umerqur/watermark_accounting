@@ -863,6 +863,21 @@ footer {
   }
 }
 
+@media (max-width: 640px) {
+  /* Reduce vertical spacing for Additional Services on mobile */
+  .additional-services-features {
+    gap: 20px;
+  }
+
+  .additional-service-icon {
+    margin-bottom: 6px;
+  }
+
+  .additional-service-item h3 {
+    margin-bottom: 4px;
+  }
+}
+
 @media (max-width: 480px) {
   .top-bar-content {
     padding: 3px 10px 3px 0;
