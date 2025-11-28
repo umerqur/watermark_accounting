@@ -670,7 +670,7 @@ footer {
 
 .additional-service-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   flex: 1;
 }
@@ -678,9 +678,7 @@ footer {
 .additional-service-icon {
   width: 28px;
   height: 28px;
-  border-radius: 999px;
-  border: 2px solid var(--accent-teal);
-  background: rgba(0, 169, 165, 0.06);
+  color: #003D6B;
   flex-shrink: 0;
 }
 
@@ -839,6 +837,7 @@ footer {
   }
 
   .additional-service-item {
+    flex-direction: column;
     align-items: flex-start;
   }
 }
