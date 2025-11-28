@@ -673,11 +673,20 @@ footer {
 }
 
 .additional-service-icon {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.additional-service-icon svg {
   width: 28px;
   height: 28px;
   color: var(--accent-teal);
-  flex-shrink: 0;
-  margin-bottom: 16px;
 }
 
 .additional-service-item h3 {
