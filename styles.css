@@ -275,6 +275,7 @@ section {
 /* Services Section */
 #services {
   background-color: var(--bg-white);
+  padding: 64px 0;
 }
 
 .services-grid {
