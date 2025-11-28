@@ -667,6 +667,7 @@ footer {
   justify-content: center;
   gap: 32px;
   margin-top: 32px;
+  padding-top: 20px;
 }
 
 .additional-service-item {
@@ -679,11 +680,11 @@ footer {
 }
 
 .additional-service-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   color: var(--accent-teal);
   flex-shrink: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .additional-service-item h3 {
