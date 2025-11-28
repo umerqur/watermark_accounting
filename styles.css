@@ -861,6 +861,22 @@ footer {
     text-align: center;
     max-width: 100%;
   }
+
+  /* Mobile spacing improvements for trust points */
+  .trust-points {
+    gap: 40px;
+  }
+
+  .trust-point h3 {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .trust-point p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 480px) {
