@@ -352,7 +352,7 @@ section {
 .trust-points {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px; /* more space between the two points on desktop */
 }
 
 .trust-point {
@@ -825,6 +825,12 @@ footer {
     gap: 32px;
   }
 
+  /* spacing for Why section on mobile */
+  .trust-points {
+    gap: 36px;
+    padding: 0 8px;
+  }
+
   .contact-wrapper {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -911,5 +917,14 @@ footer {
   .service-card,
   .pricing-card {
     padding: 24px 20px;
+  }
+
+  .trust-points {
+    gap: 32px;
+  }
+
+  .trust-point p {
+    font-size: 14px;
+    line-height: 1.55;
   }
 }
