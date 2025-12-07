@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Sherlase Wellness | Medical Weight Loss for Women</title>
-  <meta name="description" content="A women-centered medical weight loss program in Markham. Safe, sustainable results with expert support. Because your health journey deserves professional care.">
+  <title>Sherlase Wellness | Transform Your Health</title>
+  <meta name="description" content="A women-centered wellness program in Markham. Safe, sustainable results with expert support.">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17719269754"></script>
@@ -116,59 +116,97 @@
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* Hero Section with Slideshow */
     .hero {
       position: relative;
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, rgba(157, 23, 77, 0.85) 0%, rgba(131, 24, 67, 0.75) 100%),
-                  url('https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
-      color: var(--white);
+      overflow: hidden;
       padding-top: 80px;
     }
 
-    .hero-content {
-      max-width: 700px;
-      padding: 60px 0;
+    /* Background Slideshow */
+    .hero-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    /* Lifestyle images - wealthy mature women, wellness, spa, healthy living */
+    .slide-1 { background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=2400&q=90'); }
+    .slide-2 { background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2400&q=90'); }
+    .slide-3 { background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2400&q=90'); }
+    .slide-4 { background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=90'); }
+    .slide-5 { background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=2400&q=90'); }
+
+    /* Diagonal Stripe Overlay */
+    .hero-stripe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.92) 45%,
+        rgba(255, 255, 255, 0.85) 55%,
+        transparent 100%);
+      clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      padding: 60px 0 60px 40px;
     }
 
     .hero h1 {
-      font-size: 4.5rem;
-      color: var(--white);
+      font-size: 5rem;
+      color: var(--text-dark);
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 28px;
+      line-height: 1.05;
+      margin-bottom: 32px;
+      text-shadow: 0 2px 4px rgba(255,255,255,0.3);
     }
 
     .hero-lead {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       line-height: 1.7;
       margin-bottom: 40px;
-      opacity: 0.95;
+      color: var(--text-body);
       font-weight: 400;
+      max-width: 550px;
     }
 
     .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      background: var(--white);
-      color: var(--rose);
+      background: var(--rose);
+      color: var(--white);
       padding: 20px 40px;
       border-radius: 50px;
       text-decoration: none;
@@ -181,6 +219,7 @@
     }
 
     .btn-primary:hover {
+      background: var(--rose-hover);
       transform: translateY(-2px);
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
@@ -191,6 +230,40 @@
 
     .btn-primary:hover .btn-arrow {
       transform: translateX(4px);
+    }
+
+    /* Gallery Section with Rounded Squares */
+    .section-gallery {
+      background: var(--white);
+      padding: 120px 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* Why It's Hard Section */
@@ -340,17 +413,6 @@
       color: var(--white);
       padding: 120px 0;
       position: relative;
-    }
-
-    .section-benefits::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;
-      opacity: 0.1;
     }
 
     .section-benefits .container {
@@ -670,17 +732,21 @@
     /* Responsive */
     @media (max-width: 1024px) {
       .hero h1 { font-size: 3.5rem; }
+      .hero-stripe { clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%); }
       .section-header h2 { font-size: 2.5rem; }
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
       .approach-split { grid-template-columns: 1fr; gap: 48px; }
       .benefits-grid { grid-template-columns: repeat(2, 1fr); }
       .program-grid { grid-template-columns: 1fr; gap: 32px; }
       .program-card.featured { transform: scale(1); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.5rem; }
       .hero-lead { font-size: 1.15rem; }
+      .hero-content { padding: 60px 24px; }
+      .hero-stripe { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
       .section-header h2 { font-size: 2rem; }
       .section-challenge { padding: 80px 0; }
       .section-approach { padding: 80px 0; }
@@ -691,6 +757,7 @@
       .booking-wrapper { padding: 32px 24px; }
       .testimonial-card { padding: 40px 28px; }
       .testimonial-text { font-size: 1.25rem; }
+      .gallery-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -706,20 +773,53 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero">
+    <div class="hero-slideshow">
+      <div class="hero-slide slide-1 active"></div>
+      <div class="hero-slide slide-2"></div>
+      <div class="hero-slide slide-3"></div>
+      <div class="hero-slide slide-4"></div>
+      <div class="hero-slide slide-5"></div>
+    </div>
+    <div class="hero-stripe"></div>
     <div class="container">
       <div class="hero-content">
-        <span class="hero-badge">Medical Weight Loss</span>
         <h1>You deserve better than another failed diet.</h1>
         <p class="hero-lead">
           Weight loss is hard. Your body fights back. Hormones shift. Life gets busy.
-          But with the right medical support, you can finally achieve lasting results—safely and sustainably.
+          But with the right support, you can finally achieve lasting results—safely and sustainably.
         </p>
         <a href="#consult" class="btn-primary">
           Start Your Journey
           <span class="btn-arrow">→</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section-gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Your Journey</div>
+        <h2>Live Your Best Life</h2>
+        <p>Discover what's possible when you invest in yourself.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=85" alt="Yoga and wellness" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1540206063137-4a88ca974d1a?auto=format&fit=crop&w=600&q=85" alt="Healthy nutrition" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=85" alt="Active lifestyle" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=85" alt="Women walking together" />
+        </div>
       </div>
     </div>
   </section>
@@ -763,28 +863,27 @@
     <div class="container">
       <div class="section-header">
         <div class="section-label">Our Method</div>
-        <h2>Safe, Medical-Grade Weight Loss</h2>
+        <h2>Safe, Science-Based Wellness</h2>
         <p>
-          We combine medical expertise, metabolic science, and personalized support
+          We combine expertise, metabolic science, and personalized support
           to help you lose weight safely—and keep it off for good.
         </p>
       </div>
 
       <div class="approach-split">
         <div class="approach-image">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85" alt="Professional consultation" />
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=85" alt="Wellness lifestyle" />
         </div>
         <div class="approach-content">
-          <h3>Medical Supervision</h3>
+          <h3>Expert Guidance</h3>
           <p>
-            Our licensed physicians and nurse practitioners monitor your progress,
-            adjust your plan, and ensure your safety every step of the way.
+            Our specialists monitor your progress, adjust your plan, and ensure your safety every step of the way.
           </p>
           <ul class="approach-list">
             <li><span class="check-icon">✓</span> Comprehensive health assessment</li>
             <li><span class="check-icon">✓</span> Personalized treatment plans</li>
-            <li><span class="check-icon">✓</span> Ongoing medical monitoring</li>
-            <li><span class="check-icon">✓</span> Safe, FDA-approved treatments</li>
+            <li><span class="check-icon">✓</span> Ongoing support and monitoring</li>
+            <li><span class="check-icon">✓</span> Safe, proven strategies</li>
           </ul>
         </div>
       </div>
@@ -804,7 +903,7 @@
           </ul>
         </div>
         <div class="approach-image">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85" alt="Healthy lifestyle" />
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=85" alt="Healthy lifestyle" />
         </div>
       </div>
     </div>
@@ -816,7 +915,7 @@
       <div class="section-header">
         <h2>Real Results, Real Health</h2>
         <p>
-          Our patients don't just lose weight—they transform their entire health picture.
+          Our clients don't just lose weight—they transform their entire health picture.
         </p>
       </div>
 
@@ -841,8 +940,8 @@
 
         <div class="benefit-item">
           <div class="benefit-number">78%</div>
-          <h4>Reduced Medications</h4>
-          <p>Reduce or eliminate chronic medications</p>
+          <h4>Healthier Lifestyle</h4>
+          <p>Maintain positive changes long-term</p>
         </div>
       </div>
     </div>
@@ -862,9 +961,9 @@
       <div class="program-grid">
         <div class="program-card">
           <h3>Starter</h3>
-          <h4>For those exploring medical weight loss</h4>
+          <h4>For those exploring wellness</h4>
           <ul>
-            <li>Initial medical consultation</li>
+            <li>Initial consultation</li>
             <li>Metabolic health assessment</li>
             <li>Personalized nutrition plan</li>
             <li>Monthly follow-ups</li>
@@ -877,11 +976,11 @@
           <h4>Our comprehensive program</h4>
           <ul>
             <li>Everything in Starter, plus:</li>
-            <li>Medical weight loss medications</li>
+            <li>Advanced wellness support</li>
             <li>Bi-weekly coaching sessions</li>
             <li>Hormone optimization</li>
             <li>Body composition tracking</li>
-            <li>24/7 clinical support</li>
+            <li>24/7 support access</li>
           </ul>
         </div>
 
@@ -891,9 +990,9 @@
           <ul>
             <li>Everything in Complete, plus:</li>
             <li>Weekly one-on-one sessions</li>
-            <li>At-home lab services</li>
-            <li>Custom supplement protocols</li>
-            <li>Direct physician access</li>
+            <li>At-home services</li>
+            <li>Custom protocols</li>
+            <li>Direct specialist access</li>
           </ul>
         </div>
       </div>
@@ -914,7 +1013,7 @@
           <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Sarah M." class="author-image" />
           <div class="author-info">
             <h5>Sarah M.</h5>
-            <p>Age 58, Complete Care Patient</p>
+            <p>Age 58, Complete Care Client</p>
           </div>
         </div>
       </div>
@@ -987,11 +1086,27 @@
   <footer>
     <div class="container">
       <div class="footer-logo">Sherlase</div>
-      <p>Wellness & Medical Weight Loss Clinic</p>
+      <p>Wellness & Transformation Clinic</p>
       <p>Markham, Ontario</p>
       <p style="margin-top: 24px; opacity: 0.5;">&copy; 2025 Sherlase Clinic & Spa. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Hero Slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const totalSlides = slides.length;
+
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].classList.add('active');
+    }
+
+    // Change slide every 4 seconds
+    setInterval(showNextSlide, 4000);
+  </script>
 
 </body>
 </html>
