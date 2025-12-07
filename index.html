@@ -56,10 +56,13 @@
 
     h1, h2, h3, h4 {
       color: var(--text-dark);
-      letter-spacing: -0.025em;
-      font-weight: 700;
-      line-height: 1.2;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      line-height: 1.25;
     }
+
+    h1 { font-weight: 700; letter-spacing: -0.03em; }
+    h2 { font-weight: 700; letter-spacing: -0.025em; }
 
     .serif { font-family: 'Playfair Display', serif; }
 
@@ -122,8 +125,8 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, rgba(157, 23, 77, 0.85) 0%, rgba(131, 24, 67, 0.75) 100%),
-                  url('https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(157, 23, 77, 0.65) 0%, rgba(131, 24, 67, 0.55) 100%),
+                  url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
       color: var(--white);
       padding-top: 80px;
     }
@@ -279,6 +282,49 @@
       margin-bottom: 80px;
     }
 
+    .approach-split.featured {
+      position: relative;
+      background: linear-gradient(-135deg, rgba(157, 23, 77, 0.65) 0%, rgba(131, 24, 67, 0.55) 100%),
+                  url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
+      padding: 80px 60px;
+      border-radius: 24px;
+      color: var(--white);
+      margin: 0 -24px 80px -24px;
+    }
+
+    .approach-split.featured .approach-content h3,
+    .approach-split.featured .approach-content p {
+      color: var(--white);
+    }
+
+    .approach-split.featured .check-icon {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+    }
+
+    .approach-split.featured .approach-list li {
+      color: var(--white);
+    }
+
+    .approach-split.wellness-featured {
+      position: relative;
+      background:
+        radial-gradient(ellipse at top right, rgba(202, 138, 4, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom left, rgba(157, 23, 77, 0.15) 0%, transparent 50%),
+        url('https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
+      padding: 80px 60px;
+      border-radius: 32px;
+      margin: 0 -24px 0 -24px;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .approach-split.wellness-featured .approach-content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 48px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+
     .approach-image {
       border-radius: 24px;
       overflow: hidden;
@@ -349,8 +395,9 @@
       left: 0;
       right: 0;
       height: 100%;
-      background: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;
-      opacity: 0.1;
+      background: linear-gradient(135deg, rgba(157, 23, 77, 0.6) 0%, rgba(131, 24, 67, 0.7) 100%),
+                  url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2400&q=85') center/cover no-repeat;
+      opacity: 1;
     }
 
     .section-benefits .container {
@@ -770,26 +817,22 @@
         </p>
       </div>
 
-      <div class="approach-split">
-        <div class="approach-image">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85" alt="Professional consultation" />
-        </div>
+      <div class="approach-split featured">
         <div class="approach-content">
-          <h3>Medical Supervision</h3>
+          <h3>Expert Guidance</h3>
           <p>
-            Our licensed physicians and nurse practitioners monitor your progress,
-            adjust your plan, and ensure your safety every step of the way.
+            Our specialists monitor your progress, adjust your plan, and ensure your safety every step of the way.
           </p>
           <ul class="approach-list">
             <li><span class="check-icon">✓</span> Comprehensive health assessment</li>
             <li><span class="check-icon">✓</span> Personalized treatment plans</li>
-            <li><span class="check-icon">✓</span> Ongoing medical monitoring</li>
-            <li><span class="check-icon">✓</span> Safe, FDA-approved treatments</li>
+            <li><span class="check-icon">✓</span> Ongoing support and monitoring</li>
+            <li><span class="check-icon">✓</span> Safe, proven strategies</li>
           </ul>
         </div>
       </div>
 
-      <div class="approach-split" style="margin-bottom: 0;">
+      <div class="approach-split wellness-featured" style="margin-bottom: 0;">
         <div class="approach-content">
           <h3>Metabolic Balance</h3>
           <p>
@@ -803,9 +846,6 @@
             <li><span class="check-icon">✓</span> Sustainable lifestyle strategies</li>
           </ul>
         </div>
-        <div class="approach-image">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85" alt="Healthy lifestyle" />
-        </div>
       </div>
     </div>
   </section>
@@ -816,7 +856,7 @@
       <div class="section-header">
         <h2>Real Results, Real Health</h2>
         <p>
-          Our patients don't just lose weight—they transform their entire health picture.
+          Our clients don't just lose weight—they transform their entire health picture.
         </p>
       </div>
 
