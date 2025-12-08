@@ -1,1024 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Sherlase Wellness | Medical Weight Loss for Women</title>
-  <meta name="description" content="A women-centered medical weight loss program in Markham. Safe, sustainable results with expert support. Because your health journey deserves professional care.">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17719269754"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17719269754');
-
-    function sendConversion(sendTo, url, value) {
-      var cb = function() { if (url) window.location = url; };
-      gtag('event', 'conversion', { 'send_to': sendTo, 'value': value || 10.0, 'currency': 'CAD', 'event_callback': cb });
-      return false;
-    }
-  </script>
-
-  <!-- Fonts: Inter & Playfair Display -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watermark Tax Services</title>
+  <meta name="description" content="Professional tax filing services for individuals and businesses in Mississauga. Fast, accurate filing with clear answers from a licensed CPA.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --rose: #9d174d;
-      --rose-hover: #831843;
-      --rose-light: #fff1f2;
-      --gold: #ca8a04;
-      --text-dark: #1f2937;
-      --text-body: #4b5563;
-      --text-light: #6b7280;
-      --cream: #fefce8;
-      --white: #ffffff;
-      --border-light: #e5e7eb;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-body);
-      background: var(--white);
-      overflow-x: hidden;
-      line-height: 1.7;
-    }
-
-    h1, h2, h3, h4 {
-      color: var(--text-dark);
-      letter-spacing: -0.02em;
-      font-weight: 600;
-      line-height: 1.25;
-    }
-
-    h1 { font-weight: 700; letter-spacing: -0.03em; }
-    h2 { font-weight: 700; letter-spacing: -0.025em; }
-
-    .serif { font-family: 'Playfair Display', serif; }
-
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      width: 100%;
-    }
-
-    /* Navigation */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-light);
-      z-index: 1000;
-      padding: 20px 0;
-    }
-
-    .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--rose);
-      letter-spacing: -0.02em;
-    }
-
-    .nav-cta {
-      background: var(--rose);
-      color: var(--white);
-      padding: 12px 28px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .nav-cta:hover {
-      background: var(--rose-hover);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-1px);
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, rgba(157, 23, 77, 0.65) 0%, rgba(131, 24, 67, 0.55) 100%),
-                  url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
-      color: var(--white);
-      padding-top: 80px;
-    }
-
-    .hero-content {
-      max-width: 700px;
-      padding: 60px 0;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: 4.5rem;
-      color: var(--white);
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 28px;
-    }
-
-    .hero-lead {
-      font-size: 1.35rem;
-      line-height: 1.7;
-      margin-bottom: 40px;
-      opacity: 0.95;
-      font-weight: 400;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--white);
-      color: var(--rose);
-      padding: 20px 40px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-xl);
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    }
-
-    .btn-arrow {
-      transition: transform 0.3s ease;
-    }
-
-    .btn-primary:hover .btn-arrow {
-      transform: translateX(4px);
-    }
-
-    /* Why It's Hard Section */
-    .section-challenge {
-      background: var(--cream);
-      padding: 120px 0;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 80px;
-    }
-
-    .section-label {
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .section-header h2 {
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      color: var(--text-dark);
-      margin-bottom: 24px;
-    }
-
-    .section-header p {
-      font-size: 1.25rem;
-      color: var(--text-light);
-      line-height: 1.8;
-    }
-
-    .challenge-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      margin-top: 60px;
-    }
-
-    .challenge-card {
-      background: var(--white);
-      padding: 48px 36px;
-      border-radius: 20px;
-      box-shadow: var(--shadow-lg);
-      transition: all 0.3s ease;
-      border: 1px solid var(--border-light);
-    }
-
-    .challenge-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .challenge-icon {
-      font-size: 3rem;
-      margin-bottom: 24px;
-      display: block;
-    }
-
-    .challenge-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
-      color: var(--text-dark);
-    }
-
-    .challenge-card p {
-      color: var(--text-body);
-      line-height: 1.7;
-    }
-
-    /* Our Approach Section */
-    .section-approach {
-      padding: 120px 0;
-      background: var(--white);
-    }
-
-    .approach-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      margin-bottom: 80px;
-    }
-
-    .approach-split.featured {
-      position: relative;
-      background: linear-gradient(-135deg, rgba(157, 23, 77, 0.65) 0%, rgba(131, 24, 67, 0.55) 100%),
-                  url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
-      padding: 80px 60px;
-      border-radius: 24px;
-      color: var(--white);
-      margin: 0 -24px 80px -24px;
-    }
-
-    .approach-split.featured .approach-content h3,
-    .approach-split.featured .approach-content p {
-      color: var(--white);
-    }
-
-    .approach-split.featured .check-icon {
-      background: rgba(255, 255, 255, 0.2);
-      color: var(--white);
-    }
-
-    .approach-split.featured .approach-list li {
-      color: var(--white);
-    }
-
-    .approach-split.wellness-featured {
-      position: relative;
-      background:
-        radial-gradient(ellipse at top right, rgba(202, 138, 4, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at bottom left, rgba(157, 23, 77, 0.15) 0%, transparent 50%),
-        url('https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
-      padding: 80px 60px;
-      border-radius: 32px;
-      margin: 0 -24px 0 -24px;
-      box-shadow: var(--shadow-xl);
-    }
-
-    .approach-split.wellness-featured .approach-content {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 48px;
-      border-radius: 20px;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .approach-image {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-    }
-
-    .approach-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .approach-content h3 {
-      font-size: 2.5rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 24px;
-      color: var(--rose);
-    }
-
-    .approach-content p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 24px;
-      color: var(--text-body);
-    }
-
-    .approach-list {
-      list-style: none;
-      margin-top: 32px;
-    }
-
-    .approach-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-    }
-
-    .check-icon {
-      background: var(--rose-light);
-      color: var(--rose);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-weight: 700;
-      font-size: 0.875rem;
-      margin-top: 2px;
-    }
-
-    /* Benefits Section */
-    .section-benefits {
-      background: var(--rose);
-      color: var(--white);
-      padding: 120px 0;
-      position: relative;
-    }
-
-    .section-benefits::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(157, 23, 77, 0.6) 0%, rgba(131, 24, 67, 0.7) 100%),
-                  url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2400&q=85') center/cover no-repeat;
-      opacity: 1;
-    }
-
-    .section-benefits .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-benefits h2 {
-      color: var(--white);
-      text-align: center;
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 24px;
-    }
-
-    .section-benefits .section-header p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      margin-top: 60px;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 32px 24px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .benefit-number {
-      font-size: 3.5rem;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      margin-bottom: 16px;
-      line-height: 1;
-    }
-
-    .benefit-item h4 {
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .benefit-item p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    /* Program Section */
-    .section-program {
-      padding: 120px 0;
-      background: var(--white);
-    }
-
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-      margin-top: 60px;
-    }
-
-    .program-card {
-      background: var(--white);
-      border: 2px solid var(--border-light);
-      border-radius: 24px;
-      padding: 48px 40px;
-      transition: all 0.3s ease;
-    }
-
-    .program-card:hover {
-      border-color: var(--rose);
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .program-card.featured {
-      background: linear-gradient(135deg, var(--rose) 0%, var(--rose-hover) 100%);
-      color: var(--white);
-      border-color: var(--rose);
-      position: relative;
-      transform: scale(1.05);
-    }
-
-    .program-card.featured h3,
-    .program-card.featured h4,
-    .program-card.featured p,
-    .program-card.featured li {
-      color: var(--white);
-    }
-
-    .program-badge {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--white);
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .program-card h3 {
-      font-size: 1.75rem;
-      margin-bottom: 16px;
-    }
-
-    .program-card h4 {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      margin-bottom: 24px;
-      font-weight: 500;
-    }
-
-    .program-card ul {
-      list-style: none;
-      margin: 24px 0;
-    }
-
-    .program-card li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-      font-size: 0.95rem;
-    }
-
-    .program-card li::before {
-      content: '✓';
-      background: var(--rose-light);
-      color: var(--rose);
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-weight: 700;
-      font-size: 0.75rem;
-    }
-
-    .program-card.featured li::before {
-      background: rgba(255, 255, 255, 0.2);
-      color: var(--white);
-    }
-
-    /* Testimonial Section */
-    .section-testimonial {
-      background: var(--cream);
-      padding: 100px 0;
-    }
-
-    .testimonial-card {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--white);
-      padding: 64px;
-      border-radius: 24px;
-      box-shadow: var(--shadow-xl);
-      text-align: center;
-    }
-
-    .quote-icon {
-      font-size: 4rem;
-      color: var(--rose-light);
-      line-height: 1;
-      margin-bottom: 24px;
-    }
-
-    .testimonial-text {
-      font-size: 1.5rem;
-      line-height: 1.7;
-      color: var(--text-dark);
-      margin-bottom: 32px;
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 32px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border-light);
-    }
-
-    .author-image {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--rose-light);
-    }
-
-    .author-info h5 {
-      font-size: 1.1rem;
-      color: var(--text-dark);
-      margin-bottom: 4px;
-    }
-
-    .author-info p {
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
-
-    /* Booking Section */
-    .section-booking {
-      padding: 120px 0;
-      background: var(--white);
-    }
-
-    .booking-wrapper {
-      max-width: 600px;
-      margin: 60px auto 0;
-      background: var(--white);
-      padding: 56px;
-      border-radius: 24px;
-      box-shadow: var(--shadow-xl);
-      border: 1px solid var(--border-light);
-    }
-
-    .form-group {
-      margin-bottom: 24px;
-    }
-
-    .form-label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      margin-bottom: 8px;
-    }
-
-    .form-input,
-    .form-select {
-      width: 100%;
-      padding: 14px 18px;
-      border: 2px solid var(--border-light);
-      border-radius: 12px;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.3s ease;
-      background: var(--white);
-    }
-
-    .form-input:focus,
-    .form-select:focus {
-      outline: none;
-      border-color: var(--rose);
-      box-shadow: 0 0 0 4px rgba(157, 23, 77, 0.1);
-    }
-
-    .form-textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .btn-submit {
-      width: 100%;
-      background: var(--rose);
-      color: var(--white);
-      padding: 18px;
-      border-radius: 12px;
-      border: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-md);
-    }
-
-    .btn-submit:hover {
-      background: var(--rose-hover);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .form-note {
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--text-light);
-      margin-top: 20px;
-    }
-
-    /* Footer */
-    footer {
-      background: var(--text-dark);
-      color: rgba(255, 255, 255, 0.7);
-      padding: 60px 0 40px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-
-    footer p {
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .hero h1 { font-size: 3.5rem; }
-      .section-header h2 { font-size: 2.5rem; }
-      .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
-      .approach-split { grid-template-columns: 1fr; gap: 48px; }
-      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-      .program-grid { grid-template-columns: 1fr; gap: 32px; }
-      .program-card.featured { transform: scale(1); }
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero-lead { font-size: 1.15rem; }
-      .section-header h2 { font-size: 2rem; }
-      .section-challenge { padding: 80px 0; }
-      .section-approach { padding: 80px 0; }
-      .section-benefits { padding: 80px 0; }
-      .section-program { padding: 80px 0; }
-      .section-booking { padding: 80px 0; }
-      .benefits-grid { grid-template-columns: 1fr; }
-      .booking-wrapper { padding: 32px 24px; }
-      .testimonial-card { padding: 40px 28px; }
-      .testimonial-text { font-size: 1.25rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container">
-      <div class="nav-content">
-        <div class="logo">Sherlase</div>
-        <a href="#consult" class="nav-cta">Book Consultation</a>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-content">
+      <a href="#top" class="logo">
+        <img src="logo_watermark.png" alt="Watermark Taxes" class="logo">
+      </a>
+      <div class="top-bar-actions">
+        <a href="tel:+16473329587" class="phone-link">647 332 9587</a>
+        <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book a Call</button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-badge">Medical Weight Loss</span>
-        <h1>You deserve better than another failed diet.</h1>
-        <p class="hero-lead">
-          Weight loss is hard. Your body fights back. Hormones shift. Life gets busy.
-          But with the right medical support, you can finally achieve lasting results—safely and sustainably.
-        </p>
-        <a href="#consult" class="btn-primary">
-          Start Your Journey
-          <span class="btn-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why It's Hard Section -->
-  <section class="section-challenge">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">The Truth</div>
-        <h2>Why Traditional Diets Fail You</h2>
-        <p>
-          It's not your fault. Your biology, hormones, and metabolism are working against you.
-          That's why willpower alone is never enough.
-        </p>
-      </div>
-
-      <div class="challenge-grid">
-        <div class="challenge-card">
-          <span class="challenge-icon">🧬</span>
-          <h3>Metabolic Adaptation</h3>
-          <p>Your body slows down metabolism when you diet, making it harder to lose weight and easier to regain it.</p>
+        <div class="hero-text">
+          <h1>Personal and Corporate Tax Filing in Mississauga</h1>
+          <p>Fast, accurate filing with clear answers. Work with a licensed accountant who understands your situation and maximizes your outcomes.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book a Free Call</button>
+            <span class="hero-note">No pressure review of your situation and next steps</span>
+          </div>
         </div>
-
-        <div class="challenge-card">
-          <span class="challenge-icon">⚖️</span>
-          <h3>Hormonal Imbalance</h3>
-          <p>Fluctuating hormones—especially during perimenopause and menopause—make weight loss feel impossible.</p>
-        </div>
-
-        <div class="challenge-card">
-          <span class="challenge-icon">🔄</span>
-          <h3>Yo-Yo Dieting</h3>
-          <p>Crash diets damage your metabolism and create a cycle of loss and regain that leaves you worse off.</p>
+        <div class="hero-text">
+          <!-- Empty div for grid balance on desktop, content flows single column on mobile -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Safe Approach Section -->
-  <section class="section-approach">
+  <!-- What You Receive Section -->
+  <section id="benefits">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Our Method</div>
-        <h2>Safe, Medical-Grade Weight Loss</h2>
-        <p>
-          We combine medical expertise, metabolic science, and personalized support
-          to help you lose weight safely—and keep it off for good.
-        </p>
+        <h2>What You Receive</h2>
+        <p>Clear tax support in plain language. People come to Watermark to get taxes done right without wasting time reading long pages of legal text.</p>
       </div>
-
-      <div class="approach-split featured">
-        <div class="approach-content">
-          <h3>Expert Guidance</h3>
-          <p>
-            Our specialists monitor your progress, adjust your plan, and ensure your safety every step of the way.
-          </p>
-          <ul class="approach-list">
-            <li><span class="check-icon">✓</span> Comprehensive health assessment</li>
-            <li><span class="check-icon">✓</span> Personalized treatment plans</li>
-            <li><span class="check-icon">✓</span> Ongoing support and monitoring</li>
-            <li><span class="check-icon">✓</span> Safe, proven strategies</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="approach-split wellness-featured" style="margin-bottom: 0;">
-        <div class="approach-content">
-          <h3>Metabolic Balance</h3>
-          <p>
-            We address the root causes—hormones, insulin resistance, inflammation—
-            not just the symptoms. This is how you achieve lasting transformation.
-          </p>
-          <ul class="approach-list">
-            <li><span class="check-icon">✓</span> Hormone optimization therapy</li>
-            <li><span class="check-icon">✓</span> Metabolic testing and analysis</li>
-            <li><span class="check-icon">✓</span> Nutritional coaching (no starvation)</li>
-            <li><span class="check-icon">✓</span> Sustainable lifestyle strategies</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="section-benefits">
-    <div class="container">
-      <div class="section-header">
-        <h2>Real Results, Real Health</h2>
-        <p>
-          Our clients don't just lose weight—they transform their entire health picture.
-        </p>
-      </div>
-
       <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-number">15-40</div>
-          <h4>Pounds Lost</h4>
-          <p>Average weight loss in first 3 months</p>
+        <div class="benefit-card">
+          <h3>Accurate Filing</h3>
+          <p>Returns checked by a certified accountant so you avoid costly mistakes and missed forms.</p>
         </div>
-
-        <div class="benefit-item">
-          <div class="benefit-number">92%</div>
-          <h4>Improved Energy</h4>
-          <p>Report significantly better energy levels</p>
+        <div class="benefit-card">
+          <h3>Better Outcomes</h3>
+          <p>Focus on every credit and deduction you qualify for to reduce what you owe or increase your refund.</p>
         </div>
-
-        <div class="benefit-item">
-          <div class="benefit-number">85%</div>
-          <h4>Better Sleep</h4>
-          <p>Experience improved sleep quality</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-number">78%</div>
-          <h4>Reduced Medications</h4>
-          <p>Reduce or eliminate chronic medications</p>
+        <div class="benefit-card">
+          <h3>Straight Answers</h3>
+          <p>Ask anything about your situation. You get direct advice, not generic tips from a search engine.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Program Options Section -->
-  <section class="section-program">
+  <!-- Pricing Section -->
+  <section id="pricing">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Choose Your Path</div>
-        <h2>Personalized Programs</h2>
-        <p>
-          Select the level of support that fits your goals, timeline, and lifestyle.
-        </p>
+        <h2>Pricing</h2>
+        <p>Every return is different, but most clients fit into one of these ranges. You will receive a final quote before any work begins.</p>
       </div>
-
-      <div class="program-grid">
-        <div class="program-card">
-          <h3>Starter</h3>
-          <h4>For those exploring medical weight loss</h4>
-          <ul>
-            <li>Initial medical consultation</li>
-            <li>Metabolic health assessment</li>
-            <li>Personalized nutrition plan</li>
-            <li>Monthly follow-ups</li>
-          </ul>
+      <div class="pricing-grid">
+        <!-- Personal Returns -->
+        <div class="pricing-card">
+          <div class="pricing-label">Personal Returns</div>
+          <div class="pricing-amount">From $75</div>
+          <div class="pricing-description">
+            For straightforward employment income, students, new grads, and retirees with simple slips.
+          </div>
         </div>
 
-        <div class="program-card featured">
-          <span class="program-badge">Most Popular</span>
-          <h3>Complete Care</h3>
-          <h4>Our comprehensive program</h4>
-          <ul>
-            <li>Everything in Starter, plus:</li>
-            <li>Medical weight loss medications</li>
-            <li>Bi-weekly coaching sessions</li>
-            <li>Hormone optimization</li>
-            <li>Body composition tracking</li>
-            <li>24/7 clinical support</li>
-          </ul>
-        </div>
-
-        <div class="program-card">
-          <h3>Concierge</h3>
-          <h4>White-glove, personalized service</h4>
-          <ul>
-            <li>Everything in Complete, plus:</li>
-            <li>Weekly one-on-one sessions</li>
-            <li>At-home lab services</li>
-            <li>Custom supplement protocols</li>
-            <li>Direct physician access</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonial Section -->
-  <section class="section-testimonial">
-    <div class="container">
-      <div class="testimonial-card">
-        <div class="quote-icon">"</div>
-        <p class="testimonial-text">
-          After years of yo-yo dieting and feeling defeated, Sherlase gave me hope again.
-          I've lost 32 pounds in 4 months, but more importantly, I have energy to play with my grandchildren
-          and I finally feel like myself again. This isn't a diet—it's a lifestyle I can actually maintain.
-        </p>
-        <div class="testimonial-author">
-          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Sarah M." class="author-image" />
-          <div class="author-info">
-            <h5>Sarah M.</h5>
-            <p>Age 58, Complete Care Patient</p>
+        <!-- Corporate Returns -->
+        <div class="pricing-card featured">
+          <div class="pricing-label">Corporate Returns</div>
+          <div class="pricing-amount">From $500</div>
+          <div class="pricing-description">
+            Includes corporate tax filing, bookkeeping, and a financial statement package for lenders and investors.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Booking Section -->
-  <section id="consult" class="section-booking">
+  <!-- Services Section -->
+  <section id="services" class="additional-services-section">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Take the First Step</div>
-        <h2>Book Your Private Consultation</h2>
+        <h2>Additional Services</h2>
         <p>
-          No pressure. No judgment. Just honest answers about whether our program is right for you.
+          Along with personal and corporate returns, Watermark Taxes also supports
+          ongoing needs for individuals and business owners.
         </p>
       </div>
 
-      <div class="booking-wrapper">
-        <form name="sherlase-wellness" method="POST" data-netlify="true" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="sherlase-wellness" />
+      <div class="additional-services-features">
+        <div class="additional-service-item">
+          <svg class="additional-service-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="6" y="4" width="16" height="20" rx="1"/>
+            <path d="M10 4v-1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1"/>
+            <path d="M10 10h8"/>
+            <path d="M10 14h8"/>
+            <path d="M10 18h5"/>
+            <path d="M16.5 17l2 2 3-3"/>
+          </svg>
+          <h3>HST filing and sales tax support</h3>
+          <p>Filing and guidance for HST returns so deadlines are not missed.</p>
+        </div>
 
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-input" placeholder="Jane Smith" required />
+        <div class="additional-service-item">
+          <svg class="additional-service-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="4" y="8" width="20" height="14" rx="1"/>
+            <path d="M4 12h20"/>
+            <circle cx="8" cy="17" r="1.5" fill="currentColor"/>
+            <path d="M12 16h8"/>
+            <path d="M12 18h5"/>
+            <path d="M8 4v4"/>
+            <path d="M14 4v4"/>
+            <path d="M20 4v4"/>
+          </svg>
+          <h3>Payroll support</h3>
+          <p>Help setting up payroll and keeping staff payments organized.</p>
+        </div>
+
+        <div class="additional-service-item">
+          <svg class="additional-service-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M23 14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h8"/>
+            <path d="M17 3h6v6"/>
+            <path d="M23 3l-9 9"/>
+            <circle cx="14" cy="14" r="3"/>
+            <path d="M14 12v2"/>
+            <path d="M13 14h2"/>
+          </svg>
+          <h3>Business financing and lender ready packages</h3>
+          <p>Support preparing clean financials for banks and lenders.</p>
+        </div>
+      </div>
+
+      <p class="additional-services-note">
+        A full quote is provided during your call.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section id="why">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Clients Stay with Watermark Taxes</h2>
+        <p>You're not just buying a one-time return. You're building a relationship with a planner who understands your full financial story.</p>
+      </div>
+      <div class="why-content">
+        <div class="trust-points">
+          <div class="trust-point">
+            <div>
+              <h3>Licensed CPA</h3>
+              <p>Trained at the University of Waterloo with current knowledge of Canadian tax law.</p>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" name="phone" class="form-input" placeholder="(905) 555-0123" required />
+          <div class="trust-point">
+            <div>
+              <h3>Focus on accuracy and avoiding CRA issues</h3>
+              <p>Careful preparation helps clients avoid mistakes, delays, and unnecessary CRA attention.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "I had tried filing on my own and always felt unsure. After moving to Nabeel I finally know where I stand each year and I can plan with confidence."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Mark S.</strong>
+              <div>Small business owner in Mississauga</div>
+            </div>
+            <div class="author-badge">Client for five plus years</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book a Free Call</h2>
+        <p>Share a few details and we will reach out with a short call to confirm your needs and timing. No obligation.</p>
+      </div>
+      <div class="contact-wrapper">
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Best number to reach you" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="service">What service do you need?</label>
+              <select id="service" name="service" required>
+                <option value="">Select one</option>
+                <option value="personal">Personal tax filing</option>
+                <option value="corporate">Corporate tax filing</option>
+                <option value="hst">HST and sales tax</option>
+                <option value="bookkeeping">Bookkeeping</option>
+                <option value="payroll">Payroll</option>
+                <option value="non-resident">Non-resident or cross-border</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="details">Extra details</label>
+              <textarea id="details" name="details" placeholder="Share a short note about your situation"></textarea>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-input" placeholder="jane@example.com" required />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Age Range</label>
-            <select name="age" class="form-input form-select" required>
-              <option value="">Select one</option>
-              <option value="35-45">35-45</option>
-              <option value="45-55">45-55</option>
-              <option value="55-65">55-65</option>
-              <option value="65+">65+</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Primary Goal</label>
-            <select name="goal" class="form-input form-select" required>
-              <option value="">Select one</option>
-              <option value="Weight Loss">Weight Loss (15-30 lbs)</option>
-              <option value="Significant Weight Loss">Significant Weight Loss (30+ lbs)</option>
-              <option value="Metabolic Health">Metabolic Health & Energy</option>
-              <option value="Hormone Balance">Hormone Balance</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn-submit">Request Free Consultation</button>
-
-          <p class="form-note">
-            Located in Markham, ON | Secure & Confidential | No Obligation
-          </p>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Request My Call</button>
+          <p class="form-note">We respect your time and privacy. Your details are used only to respond to your request.</p>
         </form>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-content">
+              <h3>Office</h3>
+              <p>3120 Glen Erin Drive, Unit 2<br>Mississauga, Ontario L5L 1R6</p>
+              <iframe
+                class="map-embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.8755059858394!2d-79.687!3d43.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNDPCsDMyJzM2LjAiTiA3OcKwNDEnMTMuMCJX!5e0!3m2!1sen!2sca!4v0000000000000"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+              <h3>Hours During Tax Season</h3>
+              <p>Monday to Friday: 9 AM to 7 PM<br>Saturday: 10 AM to 3 PM<br>Sunday and evenings by appointment</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1026,12 +275,13 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-logo">Sherlase</div>
-      <p>Wellness & Medical Weight Loss Clinic</p>
-      <p>Markham, Ontario</p>
-      <p style="margin-top: 24px; opacity: 0.5;">&copy; 2025 Sherlase Clinic & Spa. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Watermark Taxes. All rights reserved. Serving clients in Mississauga, Brampton, Milton, and nearby area.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
