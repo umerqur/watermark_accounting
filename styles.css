@@ -820,8 +820,8 @@ footer {
     left: auto;
     bottom: auto;
     width: 60%;
-    height: 200px;
-    background-size: contain;
+    height: 260px;
+    background-size: 75%;
     background-position: right top;
     opacity: 0.75; /* keep subtle but visible */
     pointer-events: none;
