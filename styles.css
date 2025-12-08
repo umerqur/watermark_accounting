@@ -179,11 +179,24 @@ header img.logo {
   position: relative;
   overflow: hidden;
   background-color: #F8F9FB; /* match benefits section */
+  min-height: 600px;
+}
+
+/* Subtle background image using pseudo-element for better opacity control */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("hero.png");
-  background-size: 35%;      /* much smaller on desktop */
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  opacity: 1;
+  background-position: center center;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -788,8 +801,13 @@ footer {
 
   .hero {
     padding: 60px 0;
-    background-size: 45%;    /* slightly larger but still small on phones */
-    background-position: center bottom;
+    min-height: 500px;
+  }
+
+  .hero::before {
+    background-size: contain;
+    background-position: center center;
+    opacity: 0.10;
   }
 
   .hero-content {
