@@ -194,7 +194,8 @@ header img.logo {
   background-repeat: no-repeat;
   background-size: 450px auto;        /* increased from 260px */
   background-position: right 15% bottom 120px; /* moved left from 6% to 15%, adjusted bottom */
-  opacity: 0.15;                      /* slightly more visible */
+  opacity: 0.35;                      /* softer but still noticeable */
+  filter: brightness(1.05) blur(0.3px); /* keep edges visible but reduce intensity */
   pointer-events: none;
 }
 
