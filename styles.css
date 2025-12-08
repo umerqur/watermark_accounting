@@ -765,7 +765,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     padding: 0 16px;
   }
@@ -810,14 +810,21 @@ footer {
   }
 
   .hero {
-    padding: 48px 0 64px;
-    min-height: 500px;
+    position: relative;
+    padding-top: 220px; /* space for the image at the top */
   }
 
   .hero::before {
-    background-size: 60%;                        /* increased from 55% for better visibility */
-    background-position: right 5% bottom 100px;  /* better centered on mobile */
-    opacity: 0.12;                               /* slightly more visible */
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: 60%;
+    height: 200px;
+    background-size: contain;
+    background-position: right top;
+    opacity: 0.75; /* keep subtle but visible */
+    pointer-events: none;
   }
 
   .hero-content {
