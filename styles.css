@@ -192,9 +192,9 @@ header img.logo {
   bottom: 0;
   background-image: url("hero.png");
   background-repeat: no-repeat;
-  background-size: 260px auto;        /* adjust if needed */
-  background-position: right 6% bottom 140px;
-  opacity: 0.12;
+  background-size: 450px auto;        /* increased from 260px */
+  background-position: right 15% bottom 120px; /* moved left from 6% to 15%, adjusted bottom */
+  opacity: 0.15;                      /* slightly more visible */
   pointer-events: none;
 }
 
@@ -739,6 +739,16 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero::before {
+    background-size: 350px auto;        /* smaller on tablets */
+    background-position: right 10% bottom 100px;
+    opacity: 0.13;
+  }
+
   .hero-text h1 {
     font-size: 40px;
   }
@@ -804,9 +814,9 @@ footer {
   }
 
   .hero::before {
-    background-size: 55%;
-    background-position: right 12px bottom 120px;
-    opacity: 0.10;
+    background-size: 60%;                        /* increased from 55% for better visibility */
+    background-position: right 5% bottom 100px;  /* better centered on mobile */
+    opacity: 0.12;                               /* slightly more visible */
   }
 
   .hero-content {
@@ -937,8 +947,24 @@ footer {
     display: none;
   }
 
+  .hero {
+    padding: 40px 0 60px;
+    min-height: 450px;
+  }
+
+  .hero::before {
+    background-size: 70%;                       /* larger on small phones */
+    background-position: center right bottom 80px; /* centered for small screens */
+    opacity: 0.11;
+  }
+
   .hero-text h1 {
     font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 28px;
   }
 
   .section-header h2 {
