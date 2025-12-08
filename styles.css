@@ -175,27 +175,26 @@ header img.logo {
 
 /* Hero Section */
 .hero {
-  padding: 80px 0;
   position: relative;
   overflow: hidden;
-  background-color: #F8F9FB; /* match benefits section */
+  background-color: #F8F9FB; /* same as benefits section */
+  padding: 80px 0;
   min-height: 600px;
 }
 
-/* Subtle background image using pseudo-element for better opacity control */
+/* jar image on the right above the button */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-image: url("hero.png");
-  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: 260px auto;        /* adjust if needed */
+  background-position: right 6% bottom 140px;
   opacity: 0.12;
-  z-index: 0;
   pointer-events: none;
 }
 
@@ -800,13 +799,13 @@ footer {
   }
 
   .hero {
-    padding: 60px 0;
+    padding: 48px 0 64px;
     min-height: 500px;
   }
 
   .hero::before {
-    background-size: contain;
-    background-position: center center;
+    background-size: 55%;
+    background-position: right 12px bottom 120px;
     opacity: 0.10;
   }
 
