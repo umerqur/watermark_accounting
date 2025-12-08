@@ -928,6 +928,26 @@ footer {
   }
 }
 
+@media (max-width: 767px) {
+  .hero {
+    position: relative;
+    padding-top: 220px; /* space for the image at the top */
+  }
+
+  .hero::before {
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: 60%;
+    height: 200px;
+    background-size: contain;
+    background-position: right top;
+    opacity: 0.75; /* keep subtle but visible */
+    pointer-events: none;
+  }
+}
+
 @media (max-width: 480px) {
   .top-bar-content {
     padding: 3px 10px 3px 0;
