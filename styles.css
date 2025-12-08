@@ -178,33 +178,12 @@ header img.logo {
   padding: 80px 0;
   position: relative;
   overflow: hidden;
-  background-color: #FFFFFF; /* Pure white background */
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('hero.png');
-  background-size: cover;
-  background-position: center;
+  background-color: #F8F9FB; /* match benefits section */
+  background-image: url("hero.png");
+  background-size: 35%;      /* much smaller on desktop */
   background-repeat: no-repeat;
-  transform: scaleX(-1); /* Flip horizontally on desktop */
-  z-index: 0;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.85) 100%);
-  z-index: 1;
+  background-position: center bottom;
+  opacity: 1;
 }
 
 .hero-content {
@@ -222,8 +201,6 @@ header img.logo {
   color: var(--primary-blue);
   margin-bottom: 20px;
   font-weight: 700;
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9),
-               0 1px 3px rgba(255, 255, 255, 0.8);
 }
 
 .hero-text p {
@@ -232,8 +209,6 @@ header img.logo {
   color: var(--text-secondary);
   margin-bottom: 32px;
   max-width: 540px;
-  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9),
-               0 1px 2px rgba(255, 255, 255, 0.7);
 }
 
 .hero-cta {
@@ -274,6 +249,10 @@ section {
 }
 
 /* Benefits Section */
+#benefits {
+  background-color: #F8F9FB; /* match hero section */
+}
+
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -809,10 +788,8 @@ footer {
 
   .hero {
     padding: 60px 0;
-  }
-
-  .hero::before {
-    transform: none; /* Remove flip on mobile */
+    background-size: 45%;    /* slightly larger but still small on phones */
+    background-position: center bottom;
   }
 
   .hero-content {
