@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Watermark Tax Services</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-content">
+      <a href="/" class="logo">
+        <img src="logo_watermark.png" alt="Watermark Taxes" class="logo">
+      </a>
+      <div class="top-bar-actions">
+        <a href="tel:+16473329587" class="phone-link">647 332 9587</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div style="max-width: 600px; margin: 80px auto; text-align: center; padding: 40px 20px;">
+        <h1 style="margin-bottom: 24px;">Thank You!</h1>
+        <p style="font-size: 18px; line-height: 1.6; color: #5A6270; margin-bottom: 32px;">
+          We received your message and will reply soon. We typically respond within one business day.
+        </p>
+        <a href="/" class="btn btn-primary">Return to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Watermark Taxes. All rights reserved. Serving clients in Mississauga, Brampton, Milton, and nearby area.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
