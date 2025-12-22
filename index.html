@@ -209,7 +209,11 @@
         <p>Share a few details and we will reach out with a short call to confirm your needs and timing. No obligation.</p>
       </div>
       <div class="contact-wrapper">
-        <form class="contact-form" onsubmit="return false;">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
           <div class="form-grid">
             <div class="form-group">
               <label for="name">Name</label>
@@ -242,7 +246,7 @@
 
             <div class="form-group">
               <label for="details">Extra details</label>
-              <textarea id="details" name="details" placeholder="Share a short note about your situation"></textarea>
+              <textarea id="details" name="details" placeholder="Share a short note about your situation" required></textarea>
             </div>
           </div>
 
