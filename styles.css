@@ -1017,3 +1017,9 @@ footer {
 .hero-image-mobile{
   display:none !important;
 }
+
+@media (max-width: 1024px){
+  .hero-image-desktop{
+    display:none !important;
+  }
+}
