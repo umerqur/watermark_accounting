@@ -1000,3 +1000,16 @@ footer {
     line-height: 1.55;
   }
 }
+
+.phone-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+.phone-icon{
+  width:18px;
+  height:18px;
+  flex:0 0 auto;
+}
