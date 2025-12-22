@@ -126,11 +126,20 @@ header img.logo {
 }
 
 .phone-link {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--primary-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary-blue);
   white-space: nowrap;
+}
+
+.phone-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 /* Buttons */
@@ -182,26 +191,26 @@ header img.logo {
   min-height: 600px;
 }
 
+/* HERO IMAGE RULES */
+
+/* default: desktop layout */
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  gap: 32px;
 }
 
-/* Desktop hero image stays as background in the right column */
 .hero-image-desktop {
+  min-height: 420px;
+  border-radius: 16px;
   background-image: url("hero.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center;
   background-size: contain;
   opacity: 0.18;
-  min-height: 360px;
 }
 
-/* Mobile hero image element is hidden by default */
 .hero-image-mobile {
   display: none;
 }
@@ -801,9 +810,9 @@ footer {
     white-space: nowrap;
   }
 
-  /* Mobile portrait and small screens */
+  /* mobile portrait */
   .hero-content {
-    display: block;
+    grid-template-columns: 1fr;
   }
 
   .hero-image-desktop {
@@ -813,20 +822,13 @@ footer {
   .hero-image-mobile {
     display: block;
     margin-top: 18px;
+    text-align: center;
   }
 
   .hero-image-mobile img {
-    width: 100%;
-    max-width: 360px;
+    width: min(360px, 90%);
     height: auto;
-    display: block;
-    margin: 0 auto;
-    opacity: 0.28;
-  }
-
-  /* tighten spacing so image sits close to CTA */
-  .hero-cta {
-    margin-bottom: 10px;
+    opacity: 0.35;
   }
 
   .hero-text h1 {
@@ -932,17 +934,14 @@ footer {
   }
 }
 
-/* Mobile landscape specific */
+/* mobile landscape: hide image completely so it never looks broken */
 @media (max-width: 900px) and (orientation: landscape) {
-  .hero-image-mobile img {
-    max-width: 420px;
-    opacity: 0.20;
+  .hero-image-desktop {
+    display: none;
   }
 
-  /* prevent the hero from feeling cramped in landscape */
-  .hero-text h1 {
-    font-size: 34px;
-    line-height: 1.08;
+  .hero-image-mobile {
+    display: none;
   }
 }
 
