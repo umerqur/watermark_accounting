@@ -182,23 +182,6 @@ header img.logo {
   min-height: 600px;
 }
 
-/* jar image on the right above the button */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("hero.png");
-  background-repeat: no-repeat;
-  background-size: 450px auto;        /* increased from 260px */
-  background-position: right 15% bottom 120px; /* moved left from 6% to 15%, adjusted bottom */
-  opacity: 0.35;                      /* softer but still noticeable */
-  filter: brightness(1.05) blur(0.3px); /* keep edges visible but reduce intensity */
-  pointer-events: none;
-}
-
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -206,6 +189,21 @@ header img.logo {
   align-items: center;
   position: relative;
   z-index: 2;
+}
+
+/* Desktop hero image stays as background in the right column */
+.hero-image-desktop {
+  background-image: url("hero.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.18;
+  min-height: 360px;
+}
+
+/* Mobile hero image element is hidden by default */
+.hero-image-mobile {
+  display: none;
 }
 
 .hero-text h1 {
@@ -744,12 +742,6 @@ footer {
     padding: 60px 0;
   }
 
-  .hero::before {
-    background-size: 350px auto;        /* smaller on tablets */
-    background-position: right 10% bottom 100px;
-    opacity: 0.13;
-  }
-
   .hero-text h1 {
     font-size: 40px;
   }
@@ -809,27 +801,32 @@ footer {
     white-space: nowrap;
   }
 
-  .hero {
-    position: relative;
-    padding-top: 220px; /* space for the image at the top */
-  }
-
-  .hero::before {
-    top: 0;
-    right: 0;
-    left: auto;
-    bottom: auto;
-    width: 60%;
-    height: 260px;
-    background-size: 75%;
-    background-position: right top;
-    opacity: 0.75; /* keep subtle but visible */
-    pointer-events: none;
-  }
-
+  /* Mobile portrait and small screens */
   .hero-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: block;
+  }
+
+  .hero-image-desktop {
+    display: none;
+  }
+
+  .hero-image-mobile {
+    display: block;
+    margin-top: 18px;
+  }
+
+  .hero-image-mobile img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.28;
+  }
+
+  /* tighten spacing so image sits close to CTA */
+  .hero-cta {
+    margin-bottom: 10px;
   }
 
   .hero-text h1 {
@@ -935,6 +932,20 @@ footer {
   }
 }
 
+/* Mobile landscape specific */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero-image-mobile img {
+    max-width: 420px;
+    opacity: 0.20;
+  }
+
+  /* prevent the hero from feeling cramped in landscape */
+  .hero-text h1 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+}
+
 @media (max-width: 480px) {
   .top-bar-content {
     padding: 3px 10px 3px 0;
@@ -958,12 +969,6 @@ footer {
   .hero {
     padding: 40px 0 60px;
     min-height: 450px;
-  }
-
-  .hero::before {
-    background-size: 70%;                       /* larger on small phones */
-    background-position: center right bottom 80px; /* centered for small screens */
-    opacity: 0.11;
   }
 
   .hero-text h1 {
