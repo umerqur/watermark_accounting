@@ -1023,3 +1023,8 @@ footer {
     display:none !important;
   }
 }
+
+/* Phones: do not show the extra hero image under the CTA */
+.hero-image-mobile{
+  display: none !important;
+}
