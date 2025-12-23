@@ -1036,3 +1036,11 @@ footer {
   stroke:currentColor;
   fill:none;
 }
+
+/* Remove hero imagery on mobile */
+@media (max-width: 1024px){
+  .hero-image-mobile,
+  .hero-image-desktop{
+    display:none !important;
+  }
+}
