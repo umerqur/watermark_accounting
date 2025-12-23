@@ -1044,3 +1044,26 @@ footer {
     display:none !important;
   }
 }
+
+/* CPA Ontario badge in header */
+.header-right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.cpao-badge{
+  width: 92px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px){
+  .header-right{
+    gap: 10px;
+  }
+  .cpao-badge{
+    width: 68px;
+  }
+}
