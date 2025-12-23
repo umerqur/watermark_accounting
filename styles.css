@@ -86,9 +86,9 @@ header img.logo {
   height: auto;
 }
 
-/* CPA logo in header */
-.cpa-logo {
-  height: 32px;
+/* Watermark logo in header */
+.watermark-logo {
+  height: 36px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1067,20 +1067,38 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 16px;
+  gap: 10px;
+  white-space: nowrap;
 }
 
-.cpao-badge{
-  width: 92px;
-  height: auto;
+.cpa-badge{
+  height: 26px;
+  width: auto;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 @media (max-width: 768px){
   .header-right{
-    gap: 10px;
+    gap: 8px;
   }
-  .cpao-badge{
-    width: 68px;
+  .cpa-badge{
+    height: 22px;
+  }
+  .watermark-logo{
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px){
+  .call-now-text{
+    display: none;
+  }
+  .watermark-logo{
+    height: 28px;
+  }
+  .cpa-badge{
+    height: 20px;
   }
 }
