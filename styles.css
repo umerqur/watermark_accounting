@@ -1032,9 +1032,9 @@ footer {
 .phone-icon{
   width:18px;
   height:18px;
-  flex:0 0 18px;
-  stroke:currentColor;
-  fill:none;
+  fill: currentColor;
+  stroke: none;
+  flex: 0 0 18px;
 }
 
 /* Remove hero imagery on mobile */
