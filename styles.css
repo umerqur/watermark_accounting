@@ -125,23 +125,17 @@ header img.logo {
   gap: 16px;
 }
 
-.phone-link{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
+.top-bar-actions .phone-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
   font-weight: 600;
-  font-size: 18px;
-  color: var(--primary-blue);
-  white-space: nowrap;
 }
-
-.phone-icon{
-  width:18px;
-  height:18px;
-  flex:0 0 18px;
-  color: var(--primary-blue);
-  fill: currentColor;
+.top-bar-actions .phone-link svg{
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
 }
 
 /* Buttons */
@@ -807,7 +801,7 @@ footer {
     display: none;
   }
 
-  .phone-link {
+  .top-bar-actions .phone-link {
     font-size: 18px;
     white-space: nowrap;
   }
@@ -1001,18 +995,6 @@ footer {
   }
 }
 
-.phone-link{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-}
-
-.phone-icon{
-  width:18px;
-  height:18px;
-  flex:0 0 auto;
-}
 
 .hero-image-mobile{
   display:none !important;
