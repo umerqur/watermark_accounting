@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 75px; /* match the taller header */
+  padding-top: 78px; /* match the taller header with larger logos */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px; /* increased vertical padding for better spacing */
+  padding: 16px 20px; /* increased vertical padding for larger logos */
   max-width: 1200px;
   margin: 0 auto;
   gap: 16px;
@@ -88,7 +88,7 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  height: 42px;
+  height: 46px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1090,7 +1090,7 @@ footer {
 }
 
 .cpa-badge{
-  height: 30px;
+  height: 34px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1102,19 +1102,19 @@ footer {
     gap: 10px;
   }
   .cpa-badge{
-    height: 28px;
+    height: 32px;
   }
   .watermark-logo{
-    height: 40px;
+    height: 44px;
   }
 }
 
 @media (max-width: 480px){
   /* Keep "Call Now" text visible on mobile */
   .watermark-logo{
-    height: 38px;
+    height: 42px;
   }
   .cpa-badge{
-    height: 28px;
+    height: 30px;
   }
 }
