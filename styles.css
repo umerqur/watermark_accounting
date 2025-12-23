@@ -285,6 +285,7 @@ section {
 }
 
 .benefit-card {
+  position: relative;
   background: var(--bg-white);
   border: 1px solid var(--border-light);
   border-radius: 8px;
@@ -294,6 +295,23 @@ section {
 }
 
 .benefit-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.step-badge {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-blue);
+  color: var(--bg-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
   box-shadow: var(--shadow-md);
 }
 
