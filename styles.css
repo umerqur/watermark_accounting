@@ -1010,3 +1010,29 @@ footer {
 .hero-image-mobile{
   display: none !important;
 }
+
+/* Header phone link lock */
+.phone-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#0a3d66;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.phone-link:visited{
+  color:#0a3d66;
+}
+
+.phone-link:hover{
+  color:#072f4f;
+}
+
+.phone-icon{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  stroke:currentColor;
+  fill:none;
+}
