@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 60px; /* match the new, shorter header */
+  padding-top: 75px; /* match the taller header */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 20px; /* smaller vertical padding for a thinner bar */
+  padding: 14px 20px; /* increased vertical padding for better spacing */
   max-width: 1200px;
   margin: 0 auto;
   gap: 16px;
@@ -88,7 +88,7 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  height: 36px;
+  height: 42px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -781,7 +781,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 4px 12px 4px 0;
+    padding: 12px 12px 12px 0;
     gap: 8px;
   }
 
@@ -956,7 +956,7 @@ footer {
 
 @media (max-width: 480px) {
   .top-bar-content {
-    padding: 3px 10px 3px 0;
+    padding: 10px 10px 10px 0;
   }
 
   header img.logo {
@@ -1072,7 +1072,7 @@ footer {
 }
 
 .cpa-badge{
-  height: 26px;
+  height: 30px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1081,24 +1081,22 @@ footer {
 
 @media (max-width: 768px){
   .header-right{
-    gap: 8px;
+    gap: 10px;
   }
   .cpa-badge{
-    height: 22px;
+    height: 28px;
   }
   .watermark-logo{
-    height: 32px;
+    height: 40px;
   }
 }
 
 @media (max-width: 480px){
-  .call-now-text{
-    display: none;
-  }
+  /* Keep "Call Now" text visible on mobile */
   .watermark-logo{
-    height: 28px;
+    height: 38px;
   }
   .cpa-badge{
-    height: 20px;
+    height: 28px;
   }
 }
