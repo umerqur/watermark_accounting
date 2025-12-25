@@ -1167,3 +1167,15 @@ footer {
     flex: 0 0 24px;
   }
 }
+
+/* Desktop landscape: reduce header height by minimizing vertical padding */
+@media (min-width: 900px) and (orientation: landscape) {
+  .top-bar-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  body {
+    padding-top: 184px; /* match reduced header height: 184px logo + 0px padding */
+  }
+}
