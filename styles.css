@@ -893,6 +893,15 @@ footer {
     font-size: 16px;
   }
 
+  /* Left align Why section on mobile */
+  #why .section-header {
+    text-align: left;
+  }
+
+  #why .section-header p {
+    margin: 0;
+  }
+
   .benefits-grid,
   .services-grid {
     grid-template-columns: 1fr;
