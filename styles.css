@@ -56,7 +56,7 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 192px; /* match header height: 184px logo + 8px padding */
+  padding-top: 288px; /* match header height: 280px logo + 8px padding */
 }
 
 .top-bar-content {
@@ -88,7 +88,7 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  height: 184px;
+  height: 280px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -806,7 +806,7 @@ footer {
 
 @media (max-width: 767px) {
   body {
-    padding-top: 72px; /* match header height: 56px logo + 16px padding */
+    padding-top: 100px; /* match header height: 84px logo + 16px padding */
   }
 
   .container {
@@ -1002,7 +1002,7 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 64px; /* match header height: 48px logo + 16px padding */
+    padding-top: 88px; /* match header height: 72px logo + 16px padding */
   }
 
   .top-bar-content {
@@ -1143,7 +1143,7 @@ footer {
     height: 48px;
   }
   .watermark-logo{
-    height: 56px;
+    height: 84px;
   }
 }
 
@@ -1153,7 +1153,7 @@ footer {
     gap: 4px;
   }
   .watermark-logo{
-    height: 48px;
+    height: 72px;
   }
   .cpa-badge{
     height: 40px;
