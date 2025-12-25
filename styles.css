@@ -1168,14 +1168,33 @@ footer {
   }
 }
 
-/* Desktop landscape: reduce header height by minimizing vertical padding */
+/* Desktop landscape: reduce header height by setting smaller logo sizes */
 @media (min-width: 900px) and (orientation: landscape) {
+  .watermark-logo {
+    height: 100px;
+  }
+
+  .cpa-badge {
+    height: 60px;
+  }
+
   .top-bar-content {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Scale up phone link to balance with logo sizes */
+  .call-now-text {
+    font-size: 20px;
+  }
+
+  .phone-icon {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
   }
 
   body {
-    padding-top: 184px; /* match reduced header height: 184px logo + 0px padding */
+    padding-top: 120px; /* match reduced header height: 100px logo + 20px padding */
   }
 }
