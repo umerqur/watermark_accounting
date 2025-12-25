@@ -1185,22 +1185,23 @@ footer {
   }
 }
 
-/* Desktop landscape: reduce header height by setting smaller logo sizes */
+/* Desktop landscape: keep header tight and aligned */
 @media (min-width: 900px) and (orientation: landscape) {
   .watermark-logo {
-    height: 100px;
+    /* Logo stays at full 184px height from default desktop styles */
     margin-left: 0;
     object-fit: contain;
     object-position: left center;
   }
 
   .cpa-badge {
-    height: 60px;
+    height: 70px; /* Restore to default size to match large logo */
   }
 
   .top-bar-content {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* Keep header tight with minimal padding */
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   /* Scale up phone link to balance with logo sizes */
@@ -1215,6 +1216,6 @@ footer {
   }
 
   body {
-    padding-top: 120px; /* match reduced header height: 100px logo + 20px padding */
+    padding-top: 192px; /* match actual header height: 184px logo + 8px padding */
   }
 }
