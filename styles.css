@@ -75,6 +75,7 @@ body {
   gap: 12px;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  margin-left: 0;
 }
 
 .logo:hover {
@@ -93,6 +94,9 @@ header img.logo {
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  margin-left: 0;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .logo-icon {
@@ -1168,10 +1172,26 @@ footer {
   }
 }
 
+/* Desktop: ensure header aligns with hero container */
+@media (min-width: 769px) {
+  .watermark-logo {
+    margin-left: 0;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+}
+
 /* Desktop landscape: reduce header height by setting smaller logo sizes */
 @media (min-width: 900px) and (orientation: landscape) {
   .watermark-logo {
     height: 100px;
+    margin-left: 0;
+    object-fit: contain;
+    object-position: left center;
   }
 
   .cpa-badge {
