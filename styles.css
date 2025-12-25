@@ -88,7 +88,7 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  height: 46px;
+  height: 184px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1129,14 +1129,14 @@ footer {
     height: 32px;
   }
   .watermark-logo{
-    height: 44px;
+    height: 176px;
   }
 }
 
 @media (max-width: 480px){
   /* Keep "Call Now" text visible on mobile */
   .watermark-logo{
-    height: 42px;
+    height: 168px;
   }
   .cpa-badge{
     height: 30px;
