@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 78px; /* match the taller header with larger logos */
+  padding-top: 192px; /* match header height: 184px logo + 8px padding */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px; /* increased vertical padding for larger logos */
+  padding: 4px 20px; /* minimal vertical padding - height driven by logo */
   max-width: 1200px;
   margin: 0 auto;
   gap: 16px;
@@ -142,8 +142,8 @@ header img.logo {
   font-weight: 600;
 }
 .top-bar-actions .phone-link svg{
-  width: 18px;
-  height: 18px;
+  width: 28px;
+  height: 28px;
   flex: 0 0 auto;
 }
 
@@ -805,6 +805,10 @@ footer {
 }
 
 @media (max-width: 767px) {
+  body {
+    padding-top: 184px; /* match header height: 176px logo + 8px padding */
+  }
+
   .container {
     padding: 0 16px;
   }
@@ -814,7 +818,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 12px 12px 0;
+    padding: 4px 12px 4px 0;
     gap: 8px;
   }
 
@@ -825,7 +829,7 @@ footer {
   }
 
   .cpa-logo {
-    height: 28px;
+    height: 58px;
   }
 
   .logo {
@@ -997,8 +1001,12 @@ footer {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 176px; /* match header height: 168px logo + 8px padding */
+  }
+
   .top-bar-content {
-    padding: 10px 10px 10px 0;
+    padding: 4px 10px 4px 0;
   }
 
   header img.logo {
@@ -1008,7 +1016,7 @@ footer {
   }
 
   .cpa-logo {
-    height: 24px;
+    height: 50px;
   }
 
   .logo-image {
@@ -1089,11 +1097,16 @@ footer {
 }
 
 .phone-icon{
-  width:18px;
-  height:18px;
+  width:28px;
+  height:28px;
   fill: currentColor;
   stroke: none;
-  flex: 0 0 18px;
+  flex: 0 0 28px;
+}
+
+.call-now-text{
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* Remove hero imagery on mobile */
@@ -1114,7 +1127,7 @@ footer {
 }
 
 .cpa-badge{
-  height: 34px;
+  height: 70px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1126,7 +1139,7 @@ footer {
     gap: 10px;
   }
   .cpa-badge{
-    height: 32px;
+    height: 66px;
   }
   .watermark-logo{
     height: 176px;
@@ -1139,6 +1152,6 @@ footer {
     height: 168px;
   }
   .cpa-badge{
-    height: 30px;
+    height: 62px;
   }
 }
