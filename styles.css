@@ -64,8 +64,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 8px 20px; /* minimal vertical padding - height driven by logo */
-  max-width: 1200px;
-  margin: 0 auto;
   gap: 16px;
 }
 
@@ -1172,9 +1170,16 @@ footer {
   }
 }
 
-/* Desktop: ensure header aligns with hero container */
+/* Desktop: full width layout with reduced sizing */
 @media (min-width: 769px) {
+  /* Full width navbar layout */
+  .top-bar-content {
+    padding: 4px 32px; /* Tighter vertical padding, wider horizontal padding for full width */
+  }
+
+  /* Reduce logo size */
   .watermark-logo {
+    height: 120px; /* Reduced from 184px */
     margin-left: 0;
     object-fit: contain;
     object-position: left center;
@@ -1183,39 +1188,25 @@ footer {
   .logo {
     margin-left: 0;
   }
-}
 
-/* Desktop landscape: keep header tight and aligned */
-@media (min-width: 900px) and (orientation: landscape) {
-  .watermark-logo {
-    /* Logo stays at full 184px height from default desktop styles */
-    margin-left: 0;
-    object-fit: contain;
-    object-position: left center;
-  }
-
+  /* Reduce CPA badge size proportionally */
   .cpa-badge {
-    height: 70px; /* Restore to default size to match large logo */
+    height: 48px; /* Reduced from 70px */
   }
 
-  .top-bar-content {
-    /* Keep header tight with minimal padding */
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  /* Scale up phone link to balance with logo sizes */
+  /* Reduce Call Now sizing proportionally */
   .call-now-text {
-    font-size: 20px;
+    font-size: 16px; /* Reduced from 18px */
   }
 
   .phone-icon {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 32px;
+    width: 24px; /* Reduced from 28px */
+    height: 24px;
+    flex: 0 0 24px;
   }
 
+  /* Adjust body padding to match new header height: 120px logo + 8px padding */
   body {
-    padding-top: 200px; /* match actual header height: 184px logo + 16px padding (8px top + 8px bottom) */
+    padding-top: 128px;
   }
 }
