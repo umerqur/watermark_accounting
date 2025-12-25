@@ -192,8 +192,7 @@ header img.logo {
   position: relative;
   overflow: hidden;
   background-color: #F8F9FB; /* same as benefits section */
-  padding: 80px 0;
-  min-height: 600px;
+  padding: 80px 0 32px 0;
 }
 
 /* HERO IMAGE RULES */
@@ -202,7 +201,7 @@ header img.logo {
 .hero-content {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
+  align-items: start;
   gap: 32px;
 }
 
@@ -276,6 +275,7 @@ section {
 /* Benefits Section */
 #benefits {
   background-color: #F8F9FB; /* match hero section */
+  padding-top: 0;
 }
 
 .benefits-grid {
@@ -771,7 +771,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero {
-    padding: 60px 0;
+    padding: 60px 0 32px 0;
   }
 
   .hero-text h1 {
@@ -997,8 +997,7 @@ footer {
   }
 
   .hero {
-    padding: 40px 0 60px;
-    min-height: 450px;
+    padding: 40px 0 24px 0;
   }
 
   .hero-text h1 {
