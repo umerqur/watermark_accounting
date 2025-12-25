@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 192px; /* match header height: 184px logo + 8px padding */
+  padding-top: 200px; /* match header height: 184px logo + 16px padding (8px top + 8px bottom) */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 20px; /* minimal vertical padding - height driven by logo */
+  padding: 8px 20px; /* minimal vertical padding - height driven by logo */
   max-width: 1200px;
   margin: 0 auto;
   gap: 16px;
@@ -1200,8 +1200,8 @@ footer {
 
   .top-bar-content {
     /* Keep header tight with minimal padding */
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   /* Scale up phone link to balance with logo sizes */
@@ -1216,6 +1216,6 @@ footer {
   }
 
   body {
-    padding-top: 192px; /* match actual header height: 184px logo + 8px padding */
+    padding-top: 200px; /* match actual header height: 184px logo + 16px padding (8px top + 8px bottom) */
   }
 }
