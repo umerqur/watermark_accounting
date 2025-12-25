@@ -806,7 +806,7 @@ footer {
 
 @media (max-width: 767px) {
   body {
-    padding-top: 184px; /* match header height: 176px logo + 8px padding */
+    padding-top: 72px; /* match header height: 56px logo + 16px padding */
   }
 
   .container {
@@ -818,8 +818,8 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 4px 12px 4px 0;
-    gap: 8px;
+    padding: 8px 12px 8px 0;
+    gap: 6px;
   }
 
   header img.logo {
@@ -1002,11 +1002,12 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 176px; /* match header height: 168px logo + 8px padding */
+    padding-top: 64px; /* match header height: 48px logo + 16px padding */
   }
 
   .top-bar-content {
-    padding: 4px 10px 4px 0;
+    padding: 8px 10px 8px 0;
+    gap: 4px;
   }
 
   header img.logo {
@@ -1136,22 +1137,33 @@ footer {
 
 @media (max-width: 768px){
   .header-right{
-    gap: 10px;
+    gap: 6px;
   }
   .cpa-badge{
-    height: 66px;
+    height: 48px;
   }
   .watermark-logo{
-    height: 176px;
+    height: 56px;
   }
 }
 
 @media (max-width: 480px){
   /* Keep "Call Now" text visible on mobile */
+  .header-right{
+    gap: 4px;
+  }
   .watermark-logo{
-    height: 168px;
+    height: 48px;
   }
   .cpa-badge{
-    height: 62px;
+    height: 40px;
+  }
+  .call-now-text{
+    font-size: 15px;
+  }
+  .phone-icon{
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
   }
 }
