@@ -192,8 +192,8 @@ header img.logo {
   position: relative;
   overflow: hidden;
   background-color: #F8F9FB; /* same as benefits section */
-  padding: 80px 0;
-  min-height: 600px;
+  padding: 48px 0 24px 0;
+  min-height: auto;
 }
 
 /* HERO IMAGE RULES */
@@ -276,6 +276,21 @@ section {
 /* Benefits Section */
 #benefits {
   background-color: #F8F9FB; /* match hero section */
+  padding: 24px 0 80px 0;
+}
+
+#benefits .section-header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+#benefits .section-header h2 {
+  margin-bottom: 16px;
+}
+
+#benefits .section-header p {
+  margin: 0;
+  max-width: 700px;
 }
 
 .benefits-grid {
