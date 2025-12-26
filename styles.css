@@ -434,8 +434,8 @@ section {
 /* Paired Feature Items - Desktop */
 .paired-feature-item {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 12px;
 }
 
@@ -444,11 +444,21 @@ section {
 }
 
 .paired-feature-icon {
-  height: 48px;
+  height: 60px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+/* CPA logo - larger size */
+.paired-feature-item:nth-child(1) .paired-feature-icon {
+  height: 60px;
+}
+
+/* CRA logo - smaller size */
+.paired-feature-item:nth-child(2) .paired-feature-icon {
+  height: 34px;
 }
 
 .paired-feature-text {
@@ -1000,7 +1010,17 @@ footer {
   }
 
   .paired-feature-icon {
-    height: 36px;
+    height: 46px;
+  }
+
+  /* CPA logo - larger size on mobile */
+  .paired-feature-item:nth-child(1) .paired-feature-icon {
+    height: 46px;
+  }
+
+  /* CRA logo - smaller size on mobile */
+  .paired-feature-item:nth-child(2) .paired-feature-icon {
+    height: 26px;
   }
 
   .paired-feature-text {
@@ -1075,6 +1095,16 @@ footer {
 
   .trust-points {
     gap: 32px;
+  }
+
+  /* CPA logo - larger size on small mobile */
+  .paired-feature-item:nth-child(1) .paired-feature-icon {
+    height: 46px;
+  }
+
+  /* CRA logo - smaller size on small mobile */
+  .paired-feature-item:nth-child(2) .paired-feature-icon {
+    height: 26px;
   }
 
   .paired-feature-text {
