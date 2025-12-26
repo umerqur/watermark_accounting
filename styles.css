@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 58px; /* match header height: 46px logo + 12px padding (6px top + 6px bottom) */
+  padding-top: 70px; /* match header height: 54px logo + 16px padding (8px top + 8px bottom) */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 20px; /* minimal vertical padding - height driven by logo */
+  padding: 8px 20px; /* slight vertical padding - height driven by logo */
   width: 100%;
   gap: 16px;
 }
@@ -88,7 +88,7 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  max-height: 46px;
+  max-height: 54px;
   height: auto;
   width: auto;
   display: block;
@@ -1256,23 +1256,23 @@ footer {
 /* Desktop landscape: keep header tight and aligned */
 @media (min-width: 900px) and (orientation: landscape) {
   .watermark-logo {
-    /* Logo uses default max-height: 46px from desktop styles */
+    /* Logo uses default max-height: 54px from desktop styles */
     margin-left: 0;
     object-fit: contain;
     object-position: left center;
   }
 
   .cpa-badge {
-    height: 44px; /* Match proportional size with 46px logo */
+    height: 44px; /* Proportional size relative to 54px logo */
   }
 
   .top-bar-content {
-    /* Keep header tight with minimal padding */
-    padding-top: 6px;
-    padding-bottom: 6px;
+    /* Keep header tight with slight padding */
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   body {
-    padding-top: 58px; /* match actual header height: 46px logo + 12px padding (6px top + 6px bottom) */
+    padding-top: 70px; /* match actual header height: 54px logo + 16px padding (8px top + 8px bottom) */
   }
 }
