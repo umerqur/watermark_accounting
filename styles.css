@@ -439,6 +439,10 @@ section {
   gap: 12px;
 }
 
+.paired-feature-item + .paired-feature-item {
+  margin-top: 16px;
+}
+
 .paired-feature-icon-container {
   flex-shrink: 0;
 }
@@ -1012,6 +1016,10 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+
+  .paired-feature-item + .paired-feature-item {
+    margin-top: 16px;
   }
 
   .paired-feature-icon {
