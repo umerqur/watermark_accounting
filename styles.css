@@ -56,16 +56,15 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 200px; /* match header height: 184px logo + 16px padding (8px top + 8px bottom) */
+  padding-top: 58px; /* match header height: 46px logo + 12px padding (6px top + 6px bottom) */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 20px; /* minimal vertical padding - height driven by logo */
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 6px 20px; /* minimal vertical padding - height driven by logo */
+  width: 100%;
   gap: 16px;
 }
 
@@ -89,7 +88,8 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  height: 184px;
+  max-height: 46px;
+  height: auto;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -97,6 +97,7 @@ header img.logo {
   margin-left: 0;
   object-fit: contain;
   object-position: left center;
+  flex-shrink: 0;
 }
 
 .logo-icon {
@@ -810,7 +811,7 @@ footer {
 
 @media (max-width: 767px) {
   body {
-    padding-top: 72px; /* match header height: 56px logo + 16px padding */
+    padding-top: 56px; /* match header height: 40px logo + 16px padding */
   }
 
   .container {
@@ -1006,7 +1007,7 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 64px; /* match header height: 48px logo + 16px padding */
+    padding-top: 52px; /* match header height: 36px logo + 16px padding */
   }
 
   .top-bar-content {
@@ -1140,11 +1141,12 @@ footer {
 }
 
 .cpa-badge{
-  height: 70px;
+  height: 44px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px){
@@ -1152,10 +1154,11 @@ footer {
     gap: 6px;
   }
   .cpa-badge{
-    height: 48px;
+    height: 38px;
   }
   .watermark-logo{
-    height: 56px;
+    max-height: 40px;
+    height: auto;
   }
 
   /* Mobile: Hide phone number text, show only icon */
@@ -1187,10 +1190,11 @@ footer {
     gap: 4px;
   }
   .watermark-logo{
-    height: 48px;
+    max-height: 36px;
+    height: auto;
   }
   .cpa-badge{
-    height: 40px;
+    height: 34px;
   }
 
   /* Phone number text already hidden at 768px, keep hidden here */
@@ -1227,34 +1231,23 @@ footer {
 /* Desktop landscape: keep header tight and aligned */
 @media (min-width: 900px) and (orientation: landscape) {
   .watermark-logo {
-    /* Logo stays at full 184px height from default desktop styles */
+    /* Logo uses default max-height: 46px from desktop styles */
     margin-left: 0;
     object-fit: contain;
     object-position: left center;
   }
 
   .cpa-badge {
-    height: 70px; /* Restore to default size to match large logo */
+    height: 44px; /* Match proportional size with 46px logo */
   }
 
   .top-bar-content {
     /* Keep header tight with minimal padding */
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  /* Scale up phone link to balance with logo sizes */
-  .call-now-text {
-    font-size: 20px;
-  }
-
-  .phone-icon {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 32px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 
   body {
-    padding-top: 200px; /* match actual header height: 184px logo + 16px padding (8px top + 8px bottom) */
+    padding-top: 58px; /* match actual header height: 46px logo + 12px padding (6px top + 6px bottom) */
   }
 }
