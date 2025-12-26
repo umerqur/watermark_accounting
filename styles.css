@@ -448,7 +448,7 @@ section {
   line-height: 1.6;
 }
 
-/* CPA Feature Icon */
+/* CPA Feature Icon (legacy - being phased out) */
 .cpa-icon-container {
   margin-bottom: 16px;
   text-align: left;
@@ -461,6 +461,33 @@ section {
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+/* Paired Feature Blocks (CPA & CRA) - Shared styling */
+.paired-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.paired-feature-icon-container {
+  flex-shrink: 0;
+}
+
+.paired-feature-icon {
+  height: 48px;
+  width: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.paired-feature-text {
+  flex: 1;
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .testimonial-card {
@@ -1011,6 +1038,16 @@ footer {
   /* CPA Feature Icon - Mobile */
   .cpa-feature-icon {
     height: 46px;
+  }
+
+  /* Paired Feature Blocks - Mobile: stack icon above text */
+  .paired-feature-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .paired-feature-icon {
+    height: 36px;
   }
 }
 
