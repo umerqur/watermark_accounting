@@ -1109,9 +1109,17 @@ footer {
   flex: 0 0 28px;
 }
 
-.call-now-text{
+.phone-number-text{
   font-size: 18px;
   font-weight: 700;
+}
+
+/* Desktop: Add hover feedback */
+@media (min-width: 769px) {
+  .phone-link:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+  }
 }
 
 /* Remove hero imagery on mobile */
@@ -1149,10 +1157,32 @@ footer {
   .watermark-logo{
     height: 56px;
   }
+
+  /* Mobile: Hide phone number text, show only icon */
+  .phone-number-text {
+    display: none;
+  }
+
+  /* Mobile: Ensure tap target is at least 44x44px */
+  .phone-link {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile: Prevent header wrapping */
+  .top-bar-content {
+    flex-wrap: nowrap;
+  }
+
+  .header-right {
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 480px){
-  /* Keep "Call Now" text visible on mobile */
   .header-right{
     gap: 4px;
   }
@@ -1162,13 +1192,22 @@ footer {
   .cpa-badge{
     height: 40px;
   }
-  .call-now-text{
-    font-size: 15px;
+
+  /* Phone number text already hidden at 768px, keep hidden here */
+  .phone-number-text{
+    display: none;
   }
+
   .phone-icon{
     width: 24px;
     height: 24px;
     flex: 0 0 24px;
+  }
+
+  /* Ensure tap target remains at least 44x44px */
+  .phone-link {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
