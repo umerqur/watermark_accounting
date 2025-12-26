@@ -56,14 +56,14 @@ body {
 
 /* add space so content does not hide behind fixed header */
 body {
-  padding-top: 70px; /* match header height: 54px logo + 16px padding (8px top + 8px bottom) */
+  padding-top: 70px; /* match header height: 64px logo + 6px padding (3px top + 3px bottom) */
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 20px; /* slight vertical padding - height driven by logo */
+  padding: 3px 20px; /* slight vertical padding - height driven by logo */
   width: 100%;
   gap: 16px;
 }
@@ -88,7 +88,7 @@ header img.logo {
 
 /* Watermark logo in header */
 .watermark-logo {
-  max-height: 54px;
+  max-height: 64px;
   height: auto;
   width: auto;
   display: block;
@@ -840,7 +840,7 @@ footer {
 
 @media (max-width: 767px) {
   body {
-    padding-top: 56px; /* match header height: 40px logo + 16px padding */
+    padding-top: 56px; /* match header height: 46px logo + 10px padding */
   }
 
   .container {
@@ -852,7 +852,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 12px 8px 0;
+    padding: 5px 12px 5px 0;
     gap: 6px;
   }
 
@@ -1060,11 +1060,11 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 52px; /* match header height: 36px logo + 16px padding */
+    padding-top: 52px; /* match header height: 42px logo + 10px padding */
   }
 
   .top-bar-content {
-    padding: 8px 10px 8px 0;
+    padding: 5px 10px 5px 0;
     gap: 4px;
   }
 
@@ -1209,7 +1209,7 @@ footer {
 }
 
 .cpa-badge{
-  height: 44px;
+  height: 52px;
   width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -1222,10 +1222,10 @@ footer {
     gap: 6px;
   }
   .cpa-badge{
-    height: 38px;
+    height: 42px;
   }
   .watermark-logo{
-    max-height: 40px;
+    max-height: 46px;
     height: auto;
   }
 
@@ -1258,11 +1258,11 @@ footer {
     gap: 4px;
   }
   .watermark-logo{
-    max-height: 36px;
+    max-height: 42px;
     height: auto;
   }
   .cpa-badge{
-    height: 34px;
+    height: 38px;
   }
 
   /* Phone number text already hidden at 768px, keep hidden here */
@@ -1299,23 +1299,23 @@ footer {
 /* Desktop landscape: keep header tight and aligned */
 @media (min-width: 900px) and (orientation: landscape) {
   .watermark-logo {
-    /* Logo uses default max-height: 54px from desktop styles */
+    /* Logo uses default max-height: 64px from desktop styles */
     margin-left: 0;
     object-fit: contain;
     object-position: left center;
   }
 
   .cpa-badge {
-    height: 44px; /* Proportional size relative to 54px logo */
+    height: 50px; /* Proportional size relative to 64px logo */
   }
 
   .top-bar-content {
     /* Keep header tight with slight padding */
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 
   body {
-    padding-top: 70px; /* match actual header height: 54px logo + 16px padding (8px top + 8px bottom) */
+    padding-top: 70px; /* match actual header height: 64px logo + 6px padding (3px top + 3px bottom) */
   }
 }
