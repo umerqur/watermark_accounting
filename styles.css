@@ -456,6 +456,11 @@ section {
   height: 60px;
 }
 
+/* CPA logo alignment offset - desktop */
+.paired-feature-item:nth-child(1) .paired-feature-icon-container {
+  margin-left: -8px;
+}
+
 /* CRA logo - smaller size */
 .paired-feature-item:nth-child(2) .paired-feature-icon {
   height: 34px;
@@ -1018,6 +1023,11 @@ footer {
     height: 46px;
   }
 
+  /* CPA logo alignment offset - mobile */
+  .paired-feature-item:nth-child(1) .paired-feature-icon-container {
+    margin-left: -5px;
+  }
+
   /* CRA logo - smaller size on mobile */
   .paired-feature-item:nth-child(2) .paired-feature-icon {
     height: 26px;
@@ -1100,6 +1110,11 @@ footer {
   /* CPA logo - larger size on small mobile */
   .paired-feature-item:nth-child(1) .paired-feature-icon {
     height: 46px;
+  }
+
+  /* CPA logo alignment offset - small mobile */
+  .paired-feature-item:nth-child(1) .paired-feature-icon-container {
+    margin-left: -5px;
   }
 
   /* CRA logo - smaller size on small mobile */
