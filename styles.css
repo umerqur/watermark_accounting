@@ -431,36 +431,31 @@ section {
   gap: 40px; /* more space between the two points on desktop */
 }
 
-.trust-point {
-  display: block;
+/* Paired Feature Items - Desktop */
+.paired-feature-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
-.trust-point h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--primary-blue);
-  margin-bottom: 8px;
-}
-
-.trust-point p {
-  font-size: 16px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* CPA Feature Icon */
-.cpa-icon-container {
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.cpa-feature-icon {
-  height: 60px;
-  width: auto;
+.paired-feature-icon-container {
   flex-shrink: 0;
+}
+
+.paired-feature-icon {
+  height: 48px;
+  width: auto;
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+.paired-feature-text {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .testimonial-card {
@@ -997,20 +992,20 @@ footer {
     gap: 40px;
   }
 
-  .trust-point h3 {
-    margin-bottom: 12px;
-    line-height: 1.5;
+  /* Paired Feature Items - Mobile */
+  .paired-feature-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  .trust-point p {
+  .paired-feature-icon {
+    height: 36px;
+  }
+
+  .paired-feature-text {
     font-size: 16px;
     line-height: 1.75;
-    margin-bottom: 0;
-  }
-
-  /* CPA Feature Icon - Mobile */
-  .cpa-feature-icon {
-    height: 46px;
   }
 }
 
@@ -1082,14 +1077,9 @@ footer {
     gap: 32px;
   }
 
-  .trust-point p {
+  .paired-feature-text {
     font-size: 14px;
     line-height: 1.55;
-  }
-
-  /* CPA Feature Icon - Extra Small Mobile */
-  .cpa-feature-icon {
-    height: 44px;
   }
 }
 
