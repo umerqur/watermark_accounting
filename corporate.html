@@ -38,6 +38,25 @@
         margin-right: 0;
       }
     }
+
+    /* Make gradient visible - Corporate page overrides */
+    html, body { height: 100%; }
+
+    body.corporate-page {
+      background: linear-gradient(180deg, #ffffff 0%, #eef3f9 55%, #ffffff 100%);
+      background-attachment: fixed;
+    }
+
+    body.corporate-page section {
+      background: transparent;
+    }
+
+    body.corporate-page .benefit-card,
+    body.corporate-page .testimonial-card,
+    body.corporate-page .contact-form,
+    body.corporate-page footer {
+      background: #ffffff;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17824417729"></script>
@@ -48,7 +67,7 @@
     gtag('config', 'AW-17824417729');
   </script>
 </head>
-<body>
+<body class="corporate-page">
 
   <!-- Top Bar -->
   <header class="top-bar">
