@@ -14,6 +14,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body { height: 100%; }
+
+    body.home-page {
+      background: linear-gradient(180deg, #ffffff 0%, #eef3f9 55%, #ffffff 100%);
+      background-attachment: fixed;
+    }
+
+    body.home-page section {
+      background: transparent;
+    }
+
+    body.home-page .benefit-card,
+    body.home-page .pricing-card,
+    body.home-page .testimonial-card,
+    body.home-page .contact-form,
+    body.home-page footer {
+      background: #ffffff;
+    }
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17824417729"></script>
   <script>
@@ -23,7 +43,7 @@
     gtag('config', 'AW-17824417729');
   </script>
 </head>
-<body>
+<body class="home-page">
 
   <!-- Top Bar -->
   <header class="top-bar">
