@@ -22,14 +22,16 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+
     gtag('js', new Date());
 
     // Base Google Ads tag
     gtag('config', 'AW-17824417729');
 
-    // Lead form submission conversion (fires on thank-you page load)
+    // Conversion fires on thank you page load
     gtag('event', 'conversion', {
-      'send_to': 'AW-17824417729/F0ILCNagzOMbEMGPrLNC'
+      send_to: 'AW-17824417729/F0ILCNagzOMbEMGPrLNC',
+      event_callback: function () {}
     });
   </script>
 </head>
