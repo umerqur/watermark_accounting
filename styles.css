@@ -1701,3 +1701,35 @@ footer {
     transition: none;
   }
 }
+
+/* ============================================================
+   Primary site navigation
+   ============================================================ */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.site-nav a {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+  }
+
+  .quick-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
