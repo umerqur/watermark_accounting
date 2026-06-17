@@ -233,19 +233,13 @@ header img.logo {
   gap: 64px;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  margin-bottom: 18px;
-  padding: 8px 12px;
-  border: 1px solid rgba(0, 169, 165, 0.25);
-  border-radius: 999px;
-  background: rgba(230, 251, 250, 0.72);
-  color: var(--navy-800);
+.hero-context {
+  margin-bottom: 16px;
+  color: var(--accent-teal);
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero-text h1 {
@@ -270,7 +264,7 @@ header img.logo {
   display: inline-flex;
   margin: 2px 0 22px;
   padding: 10px 14px;
-  border-radius: 999px;
+  border-radius: 8px;
   background: #ffffff;
   border: 1px solid var(--card-border);
   box-shadow: var(--soft-shadow);
@@ -307,23 +301,25 @@ header img.logo {
   box-shadow: var(--soft-shadow);
 }
 
-.hero-trust-row {
+.hero-proof-line {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0;
   margin-top: 22px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 650;
 }
 
-.hero-trust-row span {
+.hero-proof-line span {
   display: inline-flex;
   align-items: center;
-  padding: 8px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(8, 47, 73, 0.08);
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 650;
+}
+
+.hero-proof-line span + span::before {
+  content: "•";
+  margin: 0 10px;
+  color: var(--accent-teal);
 }
 
 .accounting-orb {
@@ -418,33 +414,30 @@ header img.logo {
   background: rgba(0, 169, 165, 0.2);
 }
 
-.orb-card-small {
-  display: inline-flex;
+.orb-card-details {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(8, 47, 73, 0.1);
+  display: grid;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.orb-card-details div {
+  display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 14px;
-  border-radius: 999px;
-  color: var(--navy-900);
-  font-size: 14px;
-  font-weight: 750;
 }
 
-.orb-card-small.top {
-  top: 62px;
-  right: 38px;
-}
-
-.orb-card-small.bottom {
-  left: 34px;
-  bottom: 68px;
-}
-
-.orb-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  background: var(--teal-500);
-  box-shadow: 0 0 0 5px rgba(0, 169, 165, 0.14);
+.orb-card-details div::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--accent-teal);
+  border-radius: 2px;
+  flex: 0 0 6px;
 }
 
 @keyframes orbFloat {
@@ -471,7 +464,7 @@ header img.logo {
 .quick-option-card {
   display: block;
   padding: 24px;
-  border-radius: 18px;
+  border-radius: 10px;
   background: #ffffff;
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow-sm);
@@ -488,11 +481,11 @@ header img.logo {
 .quick-option-kicker {
   display: block;
   margin-bottom: 8px;
-  color: var(--accent-teal);
-  font-size: 13px;
-  font-weight: 750;
+  color: var(--primary-blue);
+  font-size: 12px;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
 }
 
 .quick-option-card strong {
@@ -1676,16 +1669,6 @@ footer {
 
   .orb-card-amount {
     font-size: 36px;
-  }
-
-  .orb-card-small.top {
-    top: 32px;
-    right: 24px;
-  }
-
-  .orb-card-small.bottom {
-    left: 24px;
-    bottom: 34px;
   }
 }
 
