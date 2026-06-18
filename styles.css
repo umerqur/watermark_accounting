@@ -1636,23 +1636,58 @@ footer {
 /* Responsive: mobile portrait */
 @media (max-width: 767px) {
   .hero {
-    padding: 44px 0 40px;
+    padding: 40px 0 36px;
   }
 
   .hero-text h1 {
-    font-size: clamp(32px, 10vw, 44px);
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
   }
 
   .hero-text p {
-    font-size: 17px;
+    font-size: 20px;
+    line-height: 1.55;
+    margin-bottom: 24px;
   }
 
   .hero-cta {
     align-items: stretch;
+    gap: 14px;
   }
 
   .hero-cta .btn {
     width: 100%;
+  }
+
+  /* Stack the proof line cleanly with square markers (no inline dots) */
+  .hero-proof-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .hero-proof-line span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-proof-line span::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--accent-teal);
+    flex: 0 0 7px;
+  }
+
+  .hero-proof-line span + span::before {
+    content: "";
+    margin: 0;
   }
 
   .accounting-orb {
